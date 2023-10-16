@@ -1,0 +1,303 @@
+.catalog-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    background: linear-gradient(45deg, #ff7300, #ffb700);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transition: transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: transparent;
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.button:hover::before {
+    transform: scale(1.5);
+}
+
+.button.scale {
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.button.scale:hover {
+    transform: scale(1.2);
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-width: 0;
+    }
+
+    50% {
+        border-width: 5px;
+    }
+
+    100% {
+        border-width: 0;
+    }
+}
+
+.border-animate::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0 solid #3498db;
+    animation: borderAnimation 2s infinite;
+}
+
+.border-animate {
+    padding: 10px 20px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    cursor: pointer;
+}
+
+.border-animate:hover::before {
+    animation-play-state: paused;
+}
+
+.outlined-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    border: 2px solid #3498db;
+    color: #3498db;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+.outlined-btn:hover {
+    color: #ffffff;
+    background-color: #3498db;
+}
+
+/* АНИМАЦИЯ КАРТИНКИ */
+main *,
+main *:after,
+main *:before {
+    box-sizing: border-box;
+}
+
+.item {
+    overflow: hidden;
+    margin: 0;
+    width: 100%;
+    list-style: none;
+    text-align: center;
+}
+
+.item figure {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: #527c82;
+    text-align: center;
+    cursor: pointer;
+}
+
+.item figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    opacity: 0.8;
+}
+
+.item figure figcaption {
+    padding: 2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.25em;
+    backface-visibility: hidden;
+}
+
+.item figure figcaption::before,
+.item figure figcaption::after {
+    pointer-events: none;
+}
+
+.item figure figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.item figure p {
+    letter-spacing: 1px;
+    margin: 0;
+    font-size: 68.5%;
+}
+
+/* Эффект при наведении */
+figure.hover-effect figcaption::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(72, 76, 97, 0) 0%, rgba(47, 79, 79, 0.9) 60%);
+    content: '';
+    opacity: 0;
+    transform: translate3d(0, 50%, 0);
+}
+
+figure.hover-effect figcaption::before,
+figure.hover-effect p {
+    transition: opacity 0.35s, transform 0.35s;
+}
+
+figure.hover-effect p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    opacity: 0;
+    transform: translate3d(0, 10px, 0);
+}
+
+figure.hover-effect:hover figcaption::before,
+figure.hover-effect:hover p {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+.video {
+    width: 50vw;
+    height: 400px;
+}
+
+.video iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.card-caption {
+    position: absolute;
+    width: 20%;
+    height: 15%;
+    margin-left: 5px;
+    background-color: rgba(0, 0, 0, 0.9);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    font-size: 18px;
+    color: #f3f3f3;
+    text-decoration: none;
+    border: 1px solid #fff;
+}
+
+.card:hover .card-caption {
+    visibility: visible;
+    opacity: 1;
+}
+
+.items-to-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.shopper-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.shopper-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+
+    background-color: darkslategrey;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.shopper-button img {
+    width: 20px;
+    filter: invert(100%);
+    height: 20px;
+}
+
+.shopper-button:hover {
+    background-color: #333;
+}
+
+.shopper-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    top: -200%;
+    left: -300%;
+}
+
+.shopper-dropdown a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.shopper-button:hover .shopper-dropdown {
+    display: block;
+}
