@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: darkslategray;
+}
+
+.container {
+    width: 80%;
+    padding: 20px;
+    background: #1f1f1f;
+}
+
+.container h2{
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.wrapper .box {
+    width: 100%;
+    position: relative;
+    padding: 20px;
+}
+
+.wrapper .box input{
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(20, 200, 80);
+    transition: 0.5s linear;
+}
+
+.wrapper .box input:valid,
+.wrapper .box input:focus{
+    padding: 20px 10px;
+    background:rgb(20, 200, 80);
+    margin-top: 10px;
+}
+
+.wrapper .box label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    transition: 0.5s linear;
+}
+
+.wrapper .box input:valid ~ label,
+.wrapper .box input:focus ~ label {
+    padding: 0;
+}
+
+.wrapper .box textarea{
+    width: 100%;
+    font-size: 20px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid rgb(20, 200, 80);
+    transition: 0.5s linear;
+}
+
+.wrapper .box textarea:valid,
+.wrapper .box textarea:focus{
+    padding: 20px 10px;
+    background:rgb(20, 200, 80);
+    margin-top: 10px;
+}
+
+.wrapper .box textarea:valid ~ label,
+.wrapper .box textarea:focus ~ label {
+    padding: 0;
+}
+
+.container input[type="submit"]{
+    background: rgb(20, 200, 80);
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,93 @@
+.voting-body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    align-items: center;
+    background: linear-gradient(45deg, darkslategray, lightblue);
+}
+
+.voting-container {
+    width: 1150px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 600px;
+    margin: 20px;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.voting-container:hover .card {
+    opacity: 0.5;
+    transition: 0.5s;
+    filter: blur(5px);
+    scale: 0.9;
+}
+
+.voting-container:hover .card:hover {
+    opacity: 1;
+    filter: blur(0px);
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 115%;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: animate 4s linear infinite;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 115%;
+    background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+    animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.card span {
+    position: absolute;
+    inset: 5px;
+    border-radius: 16px;
+    background: #0c1022;
+    z-index: 1;
+}
+
+
+.card h2 {
+    padding: 10px;
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 2em;
+}

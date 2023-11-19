@@ -251,14 +251,14 @@ figure.hover-effect:hover p {
 
 .shopper-container {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
 }
 
 .shopper-button {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
 
 
     background-color: darkslategrey;
@@ -270,9 +270,20 @@ figure.hover-effect:hover p {
 }
 
 .shopper-button img {
-    width: 20px;
+    width: 30px;
     filter: invert(100%);
-    height: 20px;
+    height: 30px;
+}
+
+.shopper-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: #fff;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 12px;
 }
 
 .shopper-button:hover {

@@ -1,0 +1,40 @@
+#likeContainer {
+    text-align: center;
+    margin-top: 50px;
+}
+#likeButton {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(230, 228, 228);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    position: relative;
+}
+
+#heartIcon {
+    filter: invert(53%) sepia(6%) saturate(250%) hue-rotate(163deg) brightness(90%) contrast(96%);
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+}
+
+#likeCount {
+    font-size: 18px;
+    color: gray;
+    padding-right: 5px;
+}
+
+#likeButton.liked {
+    background-color: #fac3bd;
+}
+
+#likeButton.liked #heartIcon{
+    filter: invert(30%) sepia(82%) saturate(2082%) hue-rotate(345deg) brightness(101%) contrast(94%);
+}
+
+#likeButton.liked #likeCount{
+    color: #f74430;
+}

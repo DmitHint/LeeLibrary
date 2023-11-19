@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+    /* margin: 0;
+    padding: 0; */
+}
+
 #quotes_of_the_day {
     background-color: grey;
     color: white;
@@ -17,10 +23,6 @@ li {
 
 #main_info {
     background-color: aliceblue;
-}
-
-#contacts {
-    background-color: honeydew;
 }
 
 ol {
@@ -59,15 +61,6 @@ ul li::marker {
     text-indent: 25px;
 }
 
-header {
-    display: flex;
-    z-index: 1;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: #333;
-    color: #fff;
-}
 
 .logo img {
     width: 50px;
@@ -124,6 +117,7 @@ nav ul li a {
 }
 
 .online-help-button {
+    z-index: 1;
     position: fixed;
     right: 20px;
     bottom: 20px;
@@ -203,13 +197,15 @@ button[type="submit"] {
 
 
 .top-nav {
+    z-index: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
+    max-width: 100%;
     justify-content: space-between;
     background-color: darkslategrey;
     color: #FFF;
-    height: 50px;
+    height: 100px;
     padding: 1em;
     position: sticky;
     top: 0;
@@ -344,8 +340,13 @@ li a {
     text-decoration: none;
 }
 
-a.active,
-a:hover {
+header a.active,
+header a:hover {
     background: #1b9bff;
     transition: .5s;
+}
+
+
+ul {
+    padding-left: 1.5rem;
 }

@@ -1,0 +1,312 @@
+:root{
+
+}
+
+footer {
+    grid-area: footer;
+    background: darkslategrey;
+
+    -webkit-box-sizing: border-box;
+
+    box-sizing: border-box;
+    z-index: 100;
+
+    padding: 0 1rem;
+
+    display: grid;
+    justify-items: start;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+
+    color: white;
+
+    grid-template-areas:
+        "about socNetworks contacts"
+        "copyright copyright copyright";
+
+    margin-top: 3rem;
+}
+
+/* Make headers white */
+footer .block-header {
+    color: white;
+    font-style: normal;
+}
+
+/* Underline under the header of the block */
+footer h2:after {
+    content: "";
+    display: block;
+    width: 20%;
+    height: 5px;
+    background: white;
+    margin-top: 10px;
+}
+
+/* Social networks block */
+footer #soc_network_holder {
+    margin: 20px 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+footer #social_networks_block {
+    grid-area: socNetworks;
+}
+
+footer #soc_network_holder a {
+    padding: 5px 5px;
+    color: var(--light-blue);
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    width: calc(2em + 5px);
+    height: calc(2em + 5px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, .6);
+
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .6);
+
+    background: #0f0f15;
+
+    border-radius: 100%;
+
+    overflow: hidden;
+
+    -webkit-transition: all 0.4s;
+
+    -o-transition: all 0.4s;
+
+    transition: all 0.4s;
+}
+
+footer #soc_network_holder a i {
+    font-size: 1.5em;
+}
+
+footer #soc_network_holder a:before {
+    position: absolute;
+    content: " ";
+    left: -2px;
+    bottom: -2px;
+    right: -2px;
+    top: -2px;
+    background: darkslategray;
+    z-index: -1;
+
+    -webkit-transition: all 0.4s;
+
+    -o-transition: all 0.4s;
+
+    transition: all 0.4s;
+}
+
+footer #soc_network_holder #vk:hover {
+    color: #0077FF;
+}
+
+footer #soc_network_holder #linkedin:hover {
+    color: #0077B5;
+}
+
+footer #soc_network_holder #twitter:hover {
+    color: #1DA1F2;
+}
+
+#soc_network_holder #telegram:hover {
+    color: #0088cc;
+}
+
+footer #soc_network_holder #github:hover {
+    color: #fafafa;
+}
+
+footer #soc_network_holder a:hover:before {
+    top: calc(100% + 2px);
+}
+
+footer #soc_network_holder a:after {
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+
+    margin: 2px;
+    border-radius: 100%;
+}
+
+footer #soc_network_holder #vk:after {
+    background: rgb(232, 223, 19);
+    background: -o-linear-gradient(315deg, rgb(232, 223, 19) 0%, rgb(255, 112, 151) 100%);
+    background: linear-gradient(135deg, rgb(232, 223, 19) 0%, rgb(255, 112, 151) 100%);
+}
+
+footer #soc_network_holder #linkedin:after {
+    background: rgb(164, 199, 136);
+    background: -o-linear-gradient(315deg, rgb(164, 199, 136) 0%, rgb(210, 162, 143) 100%);
+    background: linear-gradient(135deg, rgb(164, 199, 136) 0%, rgb(210, 162, 143) 100%);
+}
+
+footer #soc_network_holder #twitter:after {
+    background: rgb(176, 94, 192);
+    background: -o-linear-gradient(315deg, rgb(176, 94, 192) 0%, rgb(173, 39, 53) 100%);
+    background: linear-gradient(135deg, rgb(176, 94, 192) 0%, rgb(173, 39, 53) 100%);
+}
+
+footer #soc_network_holder #telegram:after {
+    background: rgb(192, 135, 94);
+    background: -o-linear-gradient(315deg, rgb(229, 133, 65) 0%, rgb(255, 0, 115) 100%);
+    background: linear-gradient(135deg, rgb(229, 133, 65) 0%, rgb(255, 0, 115) 100%);
+}
+
+footer #soc_network_holder #github:after {
+    background: rgb(51, 51, 51);
+    background: -o-linear-gradient(315deg, rgb(0, 114, 175) 0%, rgb(51, 51, 51) 50%, rgb(0, 114, 175) 100%);
+    background: linear-gradient(135deg, rgb(0, 114, 175) 0%, rgb(51, 51, 51) 50%, rgb(0, 114, 175) 100%);
+}
+
+/* Contacts block */
+footer #about_block {
+    grid-area: about;
+}
+
+footer #about_block {
+    color: white;
+}
+
+footer address {
+    grid-area: contacts;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+footer address h2 {
+    width: 100%;
+}
+
+/* Set up link colors */
+footer address a {
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: lightblue;
+    /* color: var(--light-blue); */
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 10px;
+    text-align: left;
+    position: relative;
+}
+
+footer address a i {
+    margin-right: 10px;
+}
+
+footer address a:hover {
+    /* color: var(--light-red); */
+    color: lightgreen;
+}
+
+footer address a:active {
+    color: lightpink;
+    /* color: var(--light-green); */
+}
+
+footer address a:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: -4px;
+    height: 4px;
+    /* background: var(--light-blue); */
+    background: lightblue;
+    -webkit-transition: width .3s;
+    -o-transition: width .3s;
+    transition: width .3s;
+}
+
+footer address a:hover:after {
+    width: 100%;
+    /* background: var(--light-red); */
+    background: lightgreen;
+}
+
+
+/* Copyright block */
+#copyright {
+    justify-self: center;
+    grid-area: copyright;
+    font-style: italic;
+    text-align: center;
+    opacity: 70%;
+    color: #b0b0b0;
+
+    margin: 20px 0 5px;
+}
+
+/* Make sure it all fits on tablets and phones */
+@media screen and (max-width: 1250px) {
+    footer {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "about socNetworks contacts"
+            "copyright copyright";
+    }
+}
+
+@media screen and (max-width: 800px) {
+    footer {
+        grid-template-columns: none;
+        grid-auto-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "about"
+            "socNetworks"
+            "contacts"
+            "copyright";
+        width: 100%;
+    }
+
+    #social_networks_block {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+}

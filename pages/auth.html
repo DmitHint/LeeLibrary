@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"> <!-- кодировка UTF-8 -->
+    <link rel="icon" type="image/x-icon" href="../source/logo.png"> <!-- Указываем источник фавиконки -->
+
+    <title>Авторизация</title> <!-- Название для вкладки -->
+
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <link rel="stylesheet" href="../styles/auth.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div id="captchaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <form id="captchaForm">
+                <div class="captcha">
+                    <div id="textCaptcha" class="captcha-text"></div>
+                    <input type="text" id="captchaInput" placeholder="Введите текст или сумму">
+                </div>
+                <button type="button" id="submitButton" disabled>Войти</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <form class="auth-form">
+            <p>Вход</p>
+            <input type="email" placeholder="Почта"><br>
+            <input type="password" placeholder="Пароль"><br>
+            <input id="authButton" type="button" value="Войти"><br>
+            <a href="like.html">Забыли пароль?</a>
+        </form>
+        <div class="drops">
+            <div class="drop drop-1"></div>
+            <div class="drop drop-2"></div>
+            <div class="drop drop-3"></div>
+            <div class="drop drop-4"></div>
+            <div class="drop drop-5"></div>
+        </div>
+    </div>
+
+    <script src="../scripts/auth_script.js"></script>
+</body>

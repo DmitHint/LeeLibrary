@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"> <!-- кодировка UTF-8 -->
+    <link rel="icon" type="image/x-icon" href="../source/logo.png"> <!-- Указываем источник фавиконки -->
+
+    <title>Каталог книг</title> <!-- Название для вкладки -->
+
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <link rel="stylesheet" href="../styles/catalog.css" />
+    <link rel="stylesheet" href="../styles/genres.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <header class="top-nav">
+
+        <div class="icon">
+            <img src="../source/logo.png" alt="Логотип" width="48px" height="48px">
+            <h1>Каталог</h1>
+        </div>
+
+    </header>
+
+    <main>
+
+        <div class="shopper-button" onclick="addValue()">
+            <span id="shopperCount"class="shopper-count">3</span>
+            <img src="../source/shopper.png" alt="Корзина">
+        </div>
+
+
+        <div class="catalog-list">
+
+            <div class="item">
+                <figure class="hover-effect">
+                    <img src="../source/book_pics/grokking_algorithms.png" alt="" />
+                    <figcaption>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="hover-effect">
+                    <img src="../source/book_pics/clean_code.png" alt="" />
+                    <figcaption>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+            <div class="item">
+                <figure class="hover-effect">
+                    <img src="../source/book_pics/operating_system.png" alt="" />
+                    <figcaption>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="hover-effect">
+                    <img src="../source/book_pics/go.png" alt="" />
+                    <figcaption>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+
+            <div class="item">
+                <figure class="hover-effect">
+                    <img src="../source/book_pics/sql.png" alt="" />
+                    <figcaption>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+
+
+    </main>
+
+    <script src="../scripts/catalog_script.js"></script>
+
+</body>
+
+</html>

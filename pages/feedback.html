@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8"> <!-- кодировка UTF-8 -->
+    <link rel="icon" type="image/x-icon" href="../source/logo.png"> <!-- Указываем источник фавиконки -->
+
+    <title>Обратная связь</title> <!-- Название для вкладки -->
+
+    <meta name="viewport" content="width=device-width, initialscale=1.0">
+    <link rel="stylesheet" href="../styles/feedback.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- <header class="top-nav">
+
+        <div class="icon">
+            <img src="../source/logo.png" alt="Логотип" width="48px" height="48px">
+            <h1>Каталог</h1>
+        </div>
+
+    </header> -->
+
+    <div class="container">
+        <h2>Обратная связь</h2>
+        <form>
+            <div class="wrapper">
+                <div class="box">
+                    <input type="text" name="fname" id="fname" required>
+                    <label for="fname">Имя</label>
+                </div>
+
+                <div class="box">
+                    <input type="text" name="lname" id="lname" required>
+                    <label for="lname">Фамилия</label>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="box">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="box">
+                    <input type="text" name="tel" id="tel" required>
+                    <label for="tel">Номер телефона</label>
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <div class="box">
+                    <textarea id="mes" required></textarea>
+                    <label for="mes">Оставьте свое сообщение</label>
+                </div>
+
+            </div>
+
+            <input type="submit" name="" value="Отправить">
+        </form>
+
+    </div>
+
+
+</body>
+
+</html>

@@ -4,24 +4,33 @@
 
 <head>
     <meta charset="utf-8"> <!-- кодировка UTF-8 -->
-    <link rel="icon" type="image/x-icon" href="book_pic.png"> <!-- Указываем источник фавиконки -->
+    <link rel="icon" type="image/x-icon" href="../source/logo.png"> <!-- Указываем источник фавиконки -->
     <meta name="viewport" content="width=device-width, initialscale=1.0">
     <title>LeeLibrary</title> <!-- Название для вкладки -->
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../styles/genre.css" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/book_voting.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
 </head>
 
 <body>
-    <header class="top-nav">
 
+    <header class="top-nav">
         <div class="icon">
-            <img src="source/logo.png" alt="Логотип" width="48px" height="48px">
+            <img src="../source/logo.png" alt="Логотип" width="48px" height="48px">
             <h1>LeeLibrary</h1>
         </div>
 
@@ -32,10 +41,9 @@
         </label>
         <ul class="menu">
             <li><a href="#info">О библиотеке</a></li>
-            <li><a href="#blog">Блог</a></li>
+            <li><a href="auth.html">Вход</a></li>
+            <li><a href="subscribe.html">Подписка</a></li>
             <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="#awards">Достижения и награды</a></li>
-            <li><a href="#future_plans">Будущие планы</a></li>
             <li><a href="#contacts">Контакты</a></li>
         </ul>
     </header>
@@ -57,7 +65,8 @@
                     Мы рады приветствовать вас на сайте электронной библиотеки <strong>"LeeLibrary"</strong>! Мы
                     являемся
                     <i>одной
-                        из ведущих библиотек</i> в области литературы и исследований, и предлагаем <i>широкий спектр</i>
+                        из ведущих библиотек</i> в области литературы и исследований, и предлагаем <i>широкий
+                        спектр</i>
                     произведений и ресурсов, чтобы удовлетворить потребности наших читателей.<br>
                 </p>
 
@@ -71,118 +80,65 @@
                 для всех возрастов.
             </p>
 
-            <article id="#registration">
-                <h2>Регистрация</h2>
 
-                <form method="post" action="/submit">
-
-                    <label for="first_name_input" class="reg-label">Введите имя:</label>
-                    <input type="text" id="text_input" name="first_name_input" class="input-reg-form" placeholder="Иван"
-                        required><br>
-
-                    <label for="last_name_input" class="reg-label">Введите фамилию:</label>
-                    <input type="text" id="text_input" name="last_name_input" class="input-reg-form"
-                        placeholder="Иванов" required>
-
-                    <label for="patronymic_input" class="reg-label">Введите отчество:</label>
-                    <input type="text" id="text_input" name="patronymic_input" class="input-reg-form"
-                        placeholder="Иванович" required>
-
-                    <label for="tel_input" class="reg-label">Введите номер телефона:</label>
-                    <input type="tel" id="tel_input" name="tel_input" pattern="+7 [0-9]{3}-[0-9]{2}-[0-9]{3}"
-                        placeholder="+7 123-456-7899" required>
-
-                    <label for="email_input" class="reg-label">Введите Email:</label>
-                    <input type="email" id="email_input" name="email_input" placeholder="example@example.com" required>
-
-                    <label for="password_input" class="reg-label">Придумайте пароль:</label>
-                    <input type="password" id="password_input" name="password_input" minlength="6" required>
-
-                    <label for="file_input" class="reg-label">Прикрепите скан документа, удостоверяющего
-                        личность</label>
-                    <input type="file" id="file_input" name="file_input">
-
-                    <div id=#accept_field>
-                        <input type="checkbox" id="checkbox_input" name="checkbox_input">
-                        <label>Согласие на обработку персональных данных</label>
+            <div  class="genre-container">
+                <div class="genre-box">
+                    <div id="drama" class="genre-content">
+                        <img src="../source/genre_pics/drama.png">
+                        <p>Драма - жанр, в котором описываются эмоциональные и моральные конфликты персонажей, строятся глубокие отношения и обостряются
+                            жизненные ситуации для создания сильных впечатлений у зрителя.</p>
                     </div>
-
-                    <fieldset>
-                        <legend>Ваш пол</legend>
-                        <label>
-                            <input type="radio" id="male" name="radio_group">
-                            Мужской
-                        </label>
-                        <label>
-                            <input type="radio" id="female" name="radio_group">
-                            Женский
-                        </label>
-                        <label>
-                            <input type="radio" id="other" name="radio_group" checked>
-                            Другое
-                        </label>
-                    </fieldset>
-
-
-                    <label for="datetime_input" class="reg-label">Введите дату рождения</label>
-                    <input type="datetime-local" id="datetime_input" name="datetime_input">
-
-                    <label for="textarea_input" class="reg-label">Расскажите, как узнали о нашей библиотеке:</label>
-
-                    <textarea id="textarea_input" name="textarea_input" cols="30" rows="5"
-                        placeholder="Минимум 10 символов">
-                    </textarea>
-
-                    <label for="city_select" class="reg-label">Выберите ваш город:</label>
-                    <select id="city_select" name="city_select" required>
-                        <option value="">-- Выберите город --</option>
-                        <option value="moscow">Москва</option>
-                        <option value="petersburg">Санкт-Петербург</option>
-                        <option value="other">Нет в списке</option>
-                    </select>
-
-                    <button type="submit" class="submit-reg-button">Подтвердить</button>
-
-                </form>
-
-            </article>
-
-
-            <article id="blog"> <!-- Якорь на раздел blog -->
-                <h2>Блог</h2>
-                <hr>
-                <div class="blog-item">
-                    <img src="source/books_versus.png" alt="Результат опроса">
-                    <p>
-                        Электронные книги vs. Бумажные: Что выбирают читатели?
-                        Наши результаты опроса показывают, что выбор между электронными и бумажными книгами зависит
-                        от личных предпочтений и
-                        ситуации.
-                    </p>
-                    <p>
-                        Преимущества электронных книг:<br>
-
-                        - Удобство хранения: 64% участников опроса отметили, что электронные книги более удобны для
-                        хранения, так как они не
-                        занимают много места и могут быть всегда под рукой.<br>
-
-                        - Доступность: 72% респондентов считают, что электронные книги более доступны, так как можно
-                        легко скачивать и
-                        читать новые произведения без необходимости идти в книжный магазин.<br>
-
-                        - Удобство чтения в пути: 56% опрошенных отметили, что электронные книги идеально подходят для
-                        чтения в дороге, в путешествиях или в общественном
-                        транспорте.<br>
-                    </p>
-                    <p>
-                        Электронные книги выигрывают в плане доступности и удобства хранения, в то время
-                        как бумажные книги ценятся за
-                        тактильные ощущения и коллекционную ценность.
-                    </p>
                 </div>
-                <hr>
 
-            </article>
+                <div class="genre-box">
+                    <div id="dev" class="genre-content">
+                        <img src="../source/genre_pics/dev.png">
+                        <p> IT - Жанр, фокусирующийся на информационных технологиях и компьютерном мире, отражая вызовы, связанные
+                            с высокотехнологичным обществом и кибербезопасностью, а также книги для изучения технологий.</p>
+                    </div>
+                </div>
+
+                <div class="genre-box">
+                    <div id="poetry" class="genre-content">
+                        <img src="../source/genre_pics/poetry.png">
+                        <p>Поэзия - жанр литературы, использующий метрику, ритм и метафоры для выражения эмоций, мыслей и
+                            образов, стремясь вызвать эстетическое и эмоциональное восприятие.</p>
+                    </div>
+                </div>
+
+                <div class="genre-box">
+                    <div id="detective" class="genre-content">
+                        <img src="../source/genre_pics/detective.png">
+                        <p>Детектив - жанр, в котором основное внимание уделяется расследованию тайн, преступлений и загадок, обычно с участием
+                            детективов или частных сыщиков.</p>
+                    </div>
+                </div>
+
+                <div class="genre-box">
+                    <div id="finance" class="genre-content">
+                        <img src="../source/genre_pics/finance.png">
+                        <p> Финансы - жанр, охватывающий темы связанные с управлением деньгами, инвестициями, бизнесом и
+                            экономическими вопросами.</p>
+                    </div>
+                </div>
+
+                <div class="genre-box">
+                    <div id="love" class="genre-content">
+                        <img src="../source/genre_pics/love.png">
+                        <p> Романтика - жанр, в котором акцент делается на чувствах, страсти и отношениях между персонажами,
+                            погружая зрителя или читателя в атмосферу волнующих любовных историй.</p>
+                    </div>
+                </div>
+
+                <div class="genre-box">
+                    <div id="child" class="genre-content">
+                        <img src="../source/genre_pics/child.png">
+                        <p>Для детей - жанр, созданный специально для младшей аудитории, предлагающий развивающие и увлекательные
+                            сюжеты, сочетающие в себе образование и развлечение.</p>
+                    </div>
+                </div>
+            </div>
+
 
 
             <article id="projects"> <!-- Якорь на раздел projects-->
@@ -207,7 +163,7 @@
 
                     <li>
                         <p>Интерактивная дистанционная библиотека</p>
-                        <img src="source/library_pic.jpg" usemap="#image-map" width="500" height="400">
+                        <img src="../source/library_pic.jpg" usemap="#image-map" width="500" height="400">
                         <!-- Изображение - карта с тремя областями - ссылками -->
                         <map name="image-map">
                             <area title="Смотреть фильмы" href="https://www.kinopoisk.ru/"
@@ -226,12 +182,14 @@
             <article id="awards"> <!-- Якорь на раздел awards-->
                 <h2>Достижения и награды</h2>
                 <p class="with-indent">
-                    Мы гордимся нашим активным участием в литературном сообществе и получили несколько важных наград за
+                    Мы гордимся нашим активным участием в литературном сообществе и получили несколько важных наград
+                    за
                     наши
                     достижения.
                 </p>
                 <p class="with-indent">
-                    Наше участие в различных мероприятиях, включая литературные фестивали и конференции, позволяет нам
+                    Наше участие в различных мероприятиях, включая литературные фестивали и конференции, позволяет
+                    нам
                     поддерживать и развивать наших читателей и авторов.<br>
                 </p>
                 <p class="with-indent">
@@ -256,11 +214,14 @@
                     <dd>"LeeLibrary" на протяжении 10 лет становилась обладателем этой премии</dd>
 
                     <dt><b>"Мастер Жанров"</b></dt>
-                    <dd>Награда за лучшую коллекцию в различных литературных жанрах, от классики до научной фантастики.
+                    <dd>Награда за лучшую коллекцию в различных литературных жанрах, от классики до научной
+                        фантастики.
                     </dd>
-                    <dd>Вручается ежегодно по оценке показателей ресурса и по результатам голосования пользователей</dd>
+                    <dd>Вручается ежегодно по оценке показателей ресурса и по результатам голосования пользователей
+                    </dd>
 
-                    <dt><b>Признание за нашу цифровую инициативу, помогающую доставлять электронные книги на устройства
+                    <dt><b>Признание за нашу цифровую инициативу, помогающую доставлять электронные книги на
+                            устройства
                             в
                             труднодоступных уголках страны</b></dt>
 
@@ -277,7 +238,8 @@
             <article id="future_plans"> <!-- Якорь на раздел future_plans-->
                 <h2>Будущие планы</h2>
                 <p class="with-indent">
-                    Мы не останавливаемся на достигнутом и продолжаем развиваться, чтобы соответствовать ожиданиям наших
+                    Мы не останавливаемся на достигнутом и продолжаем развиваться, чтобы соответствовать ожиданиям
+                    наших
                     читателей и
                     обеспечить уникальный опыт использования электронной библиотеки. Вот некоторые из наших будущих
                     планов:
@@ -286,7 +248,8 @@
                 <ul type="square"> <!-- Маркированный список с квадратами -->
                     <li>Расширение нашей коллекции электронных книг различных жанров и тематик.</li>
                     <li>Улучшение пользовательского опыта с помощью простого и интуитивно понятного интерфейса.</li>
-                    <li>Внедрение новых технологий, таких как машинное обучение и искусственный интеллект, для улучшения
+                    <li>Внедрение новых технологий, таких как машинное обучение и искусственный интеллект, для
+                        улучшения
                         рекомендаций продуктов и услуг.</li>
                 </ul>
             </article>
@@ -295,7 +258,7 @@
 
         <!-- Кнопка "справочная онлайн" -->
         <div class="online-help-button">
-            <a href="ссылка-на-справку-онлайн">
+            <a href="feedback.html">
                 <button>Справочная онлайн</button>
             </a>
         </div>
@@ -304,22 +267,59 @@
     </main>
 
     <footer id="contacts">
+        <div id="about_block">
+            <h2 class="block-header">О сайте</h2>
+            <p>
+                "LeeLibrary" – ваш онлайн-портал к миру литературы. У нас вы найдете богатый выбор
+                произведений для бесплатного чтения – от великих классиков до современных шедевров.<br><br>
+
+                Подписывайтесь на знания: помимо бесплатного контента, у нас есть возможность подписки,
+                предоставляющей
+                доступ к
+                эксклюзивным произведениям и новинкам. Станьте постоянным читателем и наслаждайтесь литературными
+                открытиями каждый
+                день.
+            </p>
+        </div>
+
+        <div id="social_networks_block">
+            <h2 class="block-header">Социальные сети</h2>
+
+            <div id="soc_network_holder">
+
+                <a id="vk" href="https://vk.com/" aria-label="ВКонтакте">
+                    <i class="icon fa-brands fa-vk"></i>
+                </a>
+                <a id="linkedin" href="https://www.linkedin.com/" aria-label="LinkedIn">
+                    <i class="icon fa-brands fa-linkedin-in"></i>
+                </a>
+                <a id="twitter" href="https://twitter.com/" aria-label="Twitter">
+                    <i class="icon fa-brands fa-twitter"></i>
+                </a>
+                <a id="telegram" href="https://telegram.com/" aria-label="Telegram">
+                    <i class="icon fa-brands fa-telegram"></i>
+                </a>
+                <a id="github" href="https://github.com/" aria-label="Github">
+                    <i class="icon fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+
         <address>
-            <h2>Контакты</h2>
-            Отправляйте вопросы и пожелания на
-            <!-- Ссылка на почтовый клиент -->
-            <a href="mailto:leelibrary@lee.ru">электронную почту</a><br>
-            Телефон горячей линии:
-            <!-- Ссылка на номер телефона -->
-            <a href="tel:+77777777777">+7 (777) 777-77-77</a>
+            <h2 class="block-header">Контакты</h2>
+            <a href="mailto:leelibrary@lee.ru">
+                <i class="fa-solid fa-envelope"></i>leelibrary@lee.ru</a>
+            <br>
+            <a href="tel:+79161234567">
+                <i class="fa-solid fa-phone"></i>+7 (916) 123-45-67</a>
+
         </address>
-        <h4>Мы на карте</h4>
-        <iframe
-            src="https://yandex.ru/map-widget/v1/?um=constructor%3A70b369216712be275cd4a6c72a3f6884c47beb1d67e4c01fe65db940a9717c47&amp;source=constructor"
-            width="704" height="497" frameborder="0"></iframe>
 
+        <p id="copyright" class="footer-author-text">
+            Сделал Крыжановский Дмитрий Владимирович (группа ИКБО-01-22) в 2023 году.
+        </p>
     </footer>
-
+    <script src="../scripts/script.js"></script>
 </body>
 
 </html>
