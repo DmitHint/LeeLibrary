@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/cart.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="icon">
+        <img
+          src="../source/logo.png"
+          alt="Логотип"
+          width="48px"
+          height="48px"
+        />
+        <h1>LeeLibrary</h1>
+      </div>
+
+      <input id="menu-toggle" type="checkbox" />
+      <label class="menu-button-container" for="menu-toggle">
+        <div class="menu-button"></div>
+      </label>
+
+      <ul class="menu">
+        <li><a href="auth.html">Вход</a></li>
+        <li><a href="subscribe.html">Подписка</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+        <li><a href="cart.html">Корзина</a></li>
+        <li><a href="index.html#contacts">Контакты</a></li>
+      </ul>
+    </header>
+
+    <main>
+      <div class="panel">
+        <div class="left-side"><h1>Корзина</h1></div>
+        <div class="right-side">
+          <span class="icon" onclick="filterByRating()">
+            <ion-icon name="filter-outline"></ion-icon>
+          </span>
+          <span class="icon" onclick="sortByPrice()">
+            <ion-icon name="swap-vertical-outline"></ion-icon>
+          </span>
+          <span class="icon" onclick="clearCart()">
+            <ion-icon name="trash-outline"></ion-icon>
+          </span>
+        </div>
+      </div>
+      <div id="cart-container"></div>
+      <div id="payment-button">
+        К оплате: <span id="summ-placeholder">0</span>
+      </button>
+
+      <script src="../scripts/cart_script.js"></script>
+    </main>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

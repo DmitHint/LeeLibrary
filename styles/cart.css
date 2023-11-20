@@ -1,0 +1,131 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.icon:hover {
+  color: lightseagreen;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.rating-field {
+  display: flex;
+  align-items: center;
+  margin-top: -10px;
+  margin-bottom: -10px;
+}
+
+.star-ico {
+  width: 20px;
+}
+
+.rating {
+  font-size: 14px;
+  font-weight: bold;
+  color: #af3030;
+}
+.star-ico {
+  filter: invert(31%) sepia(8%) saturate(7076%) hue-rotate(322deg)
+    brightness(96%) contrast(103%);
+  margin-right: 3px;
+}
+
+.rates-count {
+  font-size: 14px;
+  margin-left: 5px;
+  color: #aaa;
+}
+
+#cart-container {
+  max-width: 80%;
+  margin: 25px auto;
+  background-color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+#cart-container h3 {
+  padding-top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.cart-item .cover {
+  max-width: 100px;
+  max-height: 150px;
+  margin-right: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.cart-item-info {
+  flex-grow: 1;
+}
+
+.cart-item-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.cart-item-author {
+  font-size: 14px;
+  color: #666;
+}
+
+.cart-item-price {
+  font-size: 18px;
+  color: #333;
+}
+
+.remove-item {
+  cursor: pointer;
+  color: #ff0000;
+  font-size: 18px;
+}
+
+.panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  padding: 5px;
+}
+
+.right-side .icon {
+  font-size: 35px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+#payment-button {
+  max-width: 80%;
+  margin: 15px auto;
+  background-color: #4CAF50;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  font-size: 16px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+#summ-placeholder {
+  font-weight: bold;
+}
