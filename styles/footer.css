@@ -165,31 +165,12 @@ footer #soc_network_holder #vk:after {
     background: linear-gradient(135deg, rgb(232, 223, 19) 0%, rgb(255, 112, 151) 100%);
 }
 
-footer #soc_network_holder #linkedin:after {
-    background: rgb(164, 199, 136);
-    background: -o-linear-gradient(315deg, rgb(164, 199, 136) 0%, rgb(210, 162, 143) 100%);
-    background: linear-gradient(135deg, rgb(164, 199, 136) 0%, rgb(210, 162, 143) 100%);
-}
-
-footer #soc_network_holder #twitter:after {
-    background: rgb(176, 94, 192);
-    background: -o-linear-gradient(315deg, rgb(176, 94, 192) 0%, rgb(173, 39, 53) 100%);
-    background: linear-gradient(135deg, rgb(176, 94, 192) 0%, rgb(173, 39, 53) 100%);
-}
-
 footer #soc_network_holder #telegram:after {
     background: rgb(192, 135, 94);
     background: -o-linear-gradient(315deg, rgb(229, 133, 65) 0%, rgb(255, 0, 115) 100%);
     background: linear-gradient(135deg, rgb(229, 133, 65) 0%, rgb(255, 0, 115) 100%);
 }
 
-footer #soc_network_holder #github:after {
-    background: rgb(51, 51, 51);
-    background: -o-linear-gradient(315deg, rgb(0, 114, 175) 0%, rgb(51, 51, 51) 50%, rgb(0, 114, 175) 100%);
-    background: linear-gradient(135deg, rgb(0, 114, 175) 0%, rgb(51, 51, 51) 50%, rgb(0, 114, 175) 100%);
-}
-
-/* Contacts block */
 footer #about_block {
     grid-area: about;
 }
@@ -219,13 +200,11 @@ footer address h2 {
     width: 100%;
 }
 
-/* Set up link colors */
 footer address a {
     -webkit-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
     color: lightblue;
-    /* color: var(--light-blue); */
     text-decoration: none;
     font-size: 1.2rem;
     margin: 0 10px;
@@ -238,13 +217,11 @@ footer address a i {
 }
 
 footer address a:hover {
-    /* color: var(--light-red); */
     color: lightgreen;
 }
 
 footer address a:active {
     color: lightpink;
-    /* color: var(--light-green); */
 }
 
 footer address a:after {
@@ -255,7 +232,6 @@ footer address a:after {
     left: 0;
     bottom: -4px;
     height: 4px;
-    /* background: var(--light-blue); */
     background: lightblue;
     -webkit-transition: width .3s;
     -o-transition: width .3s;
@@ -264,12 +240,10 @@ footer address a:after {
 
 footer address a:hover:after {
     width: 100%;
-    /* background: var(--light-red); */
     background: lightgreen;
 }
 
 
-/* Copyright block */
 #copyright {
     justify-self: center;
     grid-area: copyright;
@@ -281,7 +255,6 @@ footer address a:hover:after {
     margin: 20px 0 5px;
 }
 
-/* Make sure it all fits on tablets and phones */
 @media screen and (max-width: 1250px) {
     footer {
         grid-template-columns: 1fr 1fr 1fr;

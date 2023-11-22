@@ -1,325 +1,252 @@
 <!DOCTYPE html>
 
 <html>
-
-<head>
-    <meta charset="utf-8"> <!-- кодировка UTF-8 -->
-    <link rel="icon" type="image/x-icon" href="../source/logo.png"> <!-- Указываем источник фавиконки -->
-    <meta name="viewport" content="width=device-width, initialscale=1.0">
-    <title>LeeLibrary</title> <!-- Название для вкладки -->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="../source/logo.png" />
+    <meta name="viewport" content="width=device-width, initialscale=1.0" />
+    <title>LeeLibrary</title>
 
     <link rel="stylesheet" href="../styles/genre.css" />
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/book_voting.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/mobile_menu.css" />
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
-</head>
-
-<body>
-
+  <body>
     <header class="top-nav">
-        <div class="icon">
-            <img src="../source/logo.png" alt="Логотип" width="48px" height="48px">
-            <h1>LeeLibrary</h1>
-        </div>
+      <div class="icon">
+        <img
+          src="../source/logo.png"
+          alt="Логотип"
+          width="48px"
+          height="48px"
+        />
+        <h1>LeeLibrary</h1>
+      </div>
 
-        <input id="menu-toggle" type="checkbox" />
-
-        <label class='menu-button-container' for="menu-toggle">
-            <div class='menu-button'></div>
-        </label>
-        <ul class="menu">
-            <li><a href="auth.html">Вход</a></li>
-            <li><a href="subscribe.html">Подписка</a></li>
-            <li><a href="catalog.html">Каталог</a></li>
-            <li><a href="cart.html">Корзина</a></li>
-            <li><a href="#contacts">Контакты</a></li>
+      <div class="search-box">
+        <form action="">
+          <input type="text" name="search" id="search" placeholder="Поиск" />
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+      <div class="pc-menu">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html">
+              <ion-icon name="home-outline"></ion-icon>
+              Главная
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="catalog.html">
+              <ion-icon name="book-outline"></ion-icon>
+              Каталог
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="favorite.html">
+              <ion-icon name="heart-outline"></ion-icon>
+              Понравившееся
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+              Корзина
+            </a>
+          </li>
+          <li class="nav-item" href="user.html">
+            <ion-icon name="person-circle-outline"></ion-icon>
+            <a href="user.html">Профиль</a>
+          </li>
         </ul>
+      </div>
+
+      <div class="mobile-menu">
+        <ul>
+          <li class="list active">
+            <a href="index.html">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Главная</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="catalog.html">
+              <span class="icon">
+                <ion-icon name="book-outline"></ion-icon>
+              </span>
+              <span class="text">Каталог</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="favorite.html">
+              <span class="icon">
+                <ion-icon name="heart-outline"></ion-icon>
+              </span>
+              <span class="text">Понравившееся</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="cart.html">
+              <span class="icon">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+              </span>
+              <span class="text">Корзина</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="user.html">
+              <span class="icon">
+                <ion-icon name="person-circle-outline"></ion-icon>
+              </span>
+              <span class="text">Профиль</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
 
-
     <main>
-        <section id="quotes_of_the_day">
-            <blockquote>Библиотеки — это сокровищницы всех богатств человеческого духа.<br>
-                <i>Г. Лейбниц</i>
-            </blockquote>
-        </section>
-
-        <section id="main_info">
-
-            <article id="info"> <!-- Якорь на раздел info-->
-
-                <h2>О библиотеке</h2>
-                <p class="with-indent"> <!-- Текст с абзацем -->
-                    Мы рады приветствовать вас на сайте электронной библиотеки <strong>"LeeLibrary"</strong>! Мы
-                    являемся
-                    <i>одной
-                        из ведущих библиотек</i> в области литературы и исследований, и предлагаем <i>широкий
-                        спектр</i>
-                    произведений и ресурсов, чтобы удовлетворить потребности наших читателей.<br>
-                </p>
-
-            </article>
-
-            <p class="with-indent">
-                <strong>"LeeLibrary"</strong> была основана <u>в 2007 году</u> с целью предоставления доступа к
-                <em>качественной</em> литературе и развития культурного образования в нашем сообществе. С тех пор мы
-                стремимся
-                быть <em>источником знаний и вдохновения</em>
-                для всех возрастов.
-            </p>
-
-
-            <div  class="genre-container">
-                <div class="genre-box">
-                    <div id="drama" class="genre-content">
-                        <img src="../source/genre_pics/drama.png">
-                        <p>Драма - жанр, в котором описываются эмоциональные и моральные конфликты персонажей, строятся глубокие отношения и обостряются
-                            жизненные ситуации для создания сильных впечатлений у зрителя.</p>
-                    </div>
-                </div>
-
-                <div class="genre-box">
-                    <div id="dev" class="genre-content">
-                        <img src="../source/genre_pics/dev.png">
-                        <p> IT - Жанр, фокусирующийся на информационных технологиях и компьютерном мире, отражая вызовы, связанные
-                            с высокотехнологичным обществом и кибербезопасностью, а также книги для изучения технологий.</p>
-                    </div>
-                </div>
-
-                <div class="genre-box">
-                    <div id="poetry" class="genre-content">
-                        <img src="../source/genre_pics/poetry.png">
-                        <p>Поэзия - жанр литературы, использующий метрику, ритм и метафоры для выражения эмоций, мыслей и
-                            образов, стремясь вызвать эстетическое и эмоциональное восприятие.</p>
-                    </div>
-                </div>
-
-                <div class="genre-box">
-                    <div id="detective" class="genre-content">
-                        <img src="../source/genre_pics/detective.png">
-                        <p>Детектив - жанр, в котором основное внимание уделяется расследованию тайн, преступлений и загадок, обычно с участием
-                            детективов или частных сыщиков.</p>
-                    </div>
-                </div>
-
-                <div class="genre-box">
-                    <div id="finance" class="genre-content">
-                        <img src="../source/genre_pics/finance.png">
-                        <p> Финансы - жанр, охватывающий темы связанные с управлением деньгами, инвестициями, бизнесом и
-                            экономическими вопросами.</p>
-                    </div>
-                </div>
-
-                <div class="genre-box">
-                    <div id="love" class="genre-content">
-                        <img src="../source/genre_pics/love.png">
-                        <p> Романтика - жанр, в котором акцент делается на чувствах, страсти и отношениях между персонажами,
-                            погружая зрителя или читателя в атмосферу волнующих любовных историй.</p>
-                    </div>
-                </div>
-
-                <div class="genre-box">
-                    <div id="child" class="genre-content">
-                        <img src="../source/genre_pics/child.png">
-                        <p>Для детей - жанр, созданный специально для младшей аудитории, предлагающий развивающие и увлекательные
-                            сюжеты, сочетающие в себе образование и развлечение.</p>
-                    </div>
-                </div>
-            </div>
-
-
-
-            <article id="projects"> <!-- Якорь на раздел projects-->
-                <h2>Проекты</h2>
-                <ul> <!-- Маркированный список -->
-                    <li> <!-- Элемент списка -->
-                        <p>Результаты конкурса, посвященного 100500-летию А.С.Пушкина</p>
-                        <!-- Изображение - ссылка на внешний ресурс -->
-                        <a href="https://ru.wikipedia.org/wiki/%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD,_%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%80_%D0%A1%D0%B5%D1%80%D0%B3%D0%B5%D0%B5%D0%B2%D0%B8%D1%87"
-                            target="_blank"><img
-                                src="https://www.museumpushkin.ru/assets/images/collections/masterpieses/6563.jpg"
-                                width="250" height="250" border="0" alt="Конкурс"></a>
-                    </li>
-
-                    <li>
-                        <p>Отчет благотворительной акции "Книги детям"</p>
-                        <!-- Изображение - ссылка на внешний ресурс -->
-                        <a href="https://shevchenko.cbstolstoy.ru/108800" target="_blank"><img
-                                src="https://shevchenko.cbstolstoy.ru/wp-content/gallery/d181d0bbd183d0b6d0b5d0b1d0bdd0b0d18f-d0b3d0b0d0bbd0b5d180d0b5d18f-2023/IMG_4243.JPG"
-                                width="300" height="200" border="0" alt="Акция"></a>
-                    </li>
-
-                    <li>
-                        <p>Интерактивная дистанционная библиотека</p>
-                        <img src="../source/library_pic.jpg" usemap="#image-map" width="500" height="400">
-                        <!-- Изображение - карта с тремя областями - ссылками -->
-                        <map name="image-map">
-                            <area title="Смотреть фильмы" href="https://www.kinopoisk.ru/"
-                                coords="500,0,390,70,390,180,500,300" shape="poly"> <!-- Многоугольник у выхода -->
-                            <area title="Топ 100 книг" href="https://readrate.com/rus/ratings/top100"
-                                coords="20,200,140,380" shape="rect"> <!-- Прямоугольник на книгах -->
-                            <area title="Интернет-магазин люстр и светильников" href="https://www.vamsvet.ru/"
-                                coords="100,50,50" shape="circle"> <!-- Круг на лампе (реклама) -->
-                        </map>
-
-                    </li>
-
-                </ul>
-            </article>
-
-            <article id="awards"> <!-- Якорь на раздел awards-->
-                <h2>Достижения и награды</h2>
-                <p class="with-indent">
-                    Мы гордимся нашим активным участием в литературном сообществе и получили несколько важных наград
-                    за
-                    наши
-                    достижения.
-                </p>
-                <p class="with-indent">
-                    Наше участие в различных мероприятиях, включая литературные фестивали и конференции, позволяет
-                    нам
-                    поддерживать и развивать наших читателей и авторов.<br>
-                </p>
-                <p class="with-indent">
-                    Мы придерживаемся высоких стандартов, в том числе применяем Международные стандарты описания
-                    ресурсов
-                    <abbr>(ISBD)</abbr>, а
-                    также различные местные и международные стандарты. В нашей работе мы руководствуемся <cite>[ГОСТ
-                        11.11.11]</cite>, гарантируя качество обслуживания и описание нашей коллекции.<br>
-                </p>
-                <p class="with-indent">
-                    В прошлом году мы получили несколько значимых достижений, подтверждающих нашу репутацию и
-                    посвященность
-                    качеству:<br>
-                <p>
-
-                <p class="with-indent">
-                <dl> <!-- Список описаний -->
-                    <dt><b>Премия за Лучшую Электронную Библиотеку от Международной Ассоциации Библиотек</b></dt>
-                    <!-- Термин -->
-                    <dd>Премия вручается читательским интернет-ресурсам ежегодно, начиная
-                        с 1993 года</dd> <!-- Описание термина -->
-                    <dd>"LeeLibrary" на протяжении 10 лет становилась обладателем этой премии</dd>
-
-                    <dt><b>"Мастер Жанров"</b></dt>
-                    <dd>Награда за лучшую коллекцию в различных литературных жанрах, от классики до научной
-                        фантастики.
-                    </dd>
-                    <dd>Вручается ежегодно по оценке показателей ресурса и по результатам голосования пользователей
-                    </dd>
-
-                    <dt><b>Признание за нашу цифровую инициативу, помогающую доставлять электронные книги на
-                            устройства
-                            в
-                            труднодоступных уголках страны</b></dt>
-
-                    <dt><b>Награда "Книга Года" за самую популярную книгу в нашей коллекции</b></dt>
-                    <dd>Книга "Маленький принц" была прочитана на нашем ресурсе более 400 тыс. раз за 2020 год</dd>
-                    </dt>
-
-                    <dt><b>"Виртуальный Путешественник"</b></dt>
-                    <dd>Внедрения технологий AR, которые "оживляют" изображения, перемещая их в мир читателя</dd>
-                </dl>
-                </p>
-            </article>
-
-            <article id="future_plans"> <!-- Якорь на раздел future_plans-->
-                <h2>Будущие планы</h2>
-                <p class="with-indent">
-                    Мы не останавливаемся на достигнутом и продолжаем развиваться, чтобы соответствовать ожиданиям
-                    наших
-                    читателей и
-                    обеспечить уникальный опыт использования электронной библиотеки. Вот некоторые из наших будущих
-                    планов:
-                </p>
-
-                <ul type="square"> <!-- Маркированный список с квадратами -->
-                    <li>Расширение нашей коллекции электронных книг различных жанров и тематик.</li>
-                    <li>Улучшение пользовательского опыта с помощью простого и интуитивно понятного интерфейса.</li>
-                    <li>Внедрение новых технологий, таких как машинное обучение и искусственный интеллект, для
-                        улучшения
-                        рекомендаций продуктов и услуг.</li>
-                </ul>
-            </article>
-
-        </section>
-
-        <!-- Кнопка "справочная онлайн" -->
-        <div class="online-help-button">
-            <a href="feedback.html">
-                <button>Справочная онлайн</button>
-            </a>
-        </div>
-
-
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
+      <p>hello</p>
     </main>
 
     <footer id="contacts">
-        <div id="about_block">
-            <h2 class="block-header">О сайте</h2>
-            <p>
-                "LeeLibrary" – ваш онлайн-портал к миру литературы. У нас вы найдете богатый выбор
-                произведений для бесплатного чтения – от великих классиков до современных шедевров.<br><br>
+      <div id="about_block">
+        <h2 class="block-header">О сайте</h2>
+        <p>
+          "LeeLibrary" – ваш онлайн-портал к миру литературы. У нас вы найдете
+          богатый выбор произведений для бесплатного чтения – от великих
+          классиков до современных шедевров.<br /><br />
 
-                Подписывайтесь на знания: помимо бесплатного контента, у нас есть возможность подписки,
-                предоставляющей
-                доступ к
-                эксклюзивным произведениям и новинкам. Станьте постоянным читателем и наслаждайтесь литературными
-                открытиями каждый
-                день.
-            </p>
-        </div>
-
-        <div id="social_networks_block">
-            <h2 class="block-header">Социальные сети</h2>
-
-            <div id="soc_network_holder">
-
-                <a id="vk" href="https://vk.com/" aria-label="ВКонтакте">
-                    <i class="icon fa-brands fa-vk"></i>
-                </a>
-                <a id="linkedin" href="https://www.linkedin.com/" aria-label="LinkedIn">
-                    <i class="icon fa-brands fa-linkedin-in"></i>
-                </a>
-                <a id="twitter" href="https://twitter.com/" aria-label="Twitter">
-                    <i class="icon fa-brands fa-twitter"></i>
-                </a>
-                <a id="telegram" href="https://telegram.com/" aria-label="Telegram">
-                    <i class="icon fa-brands fa-telegram"></i>
-                </a>
-                <a id="github" href="https://github.com/" aria-label="Github">
-                    <i class="icon fa-brands fa-github"></i>
-                </a>
-            </div>
-        </div>
-
-        <address>
-            <h2 class="block-header">Контакты</h2>
-            <a href="mailto:leelibrary@lee.ru">
-                <i class="fa-solid fa-envelope"></i>leelibrary@lee.ru</a>
-            <br>
-            <a href="tel:+79161234567">
-                <i class="fa-solid fa-phone"></i>+7 (916) 123-45-67</a>
-
-        </address>
-
-        <p id="copyright" class="footer-author-text">
-            Сделал Крыжановский Дмитрий Владимирович (группа ИКБО-01-22) в 2023 году.
+          Подписывайтесь на знания: помимо бесплатного контента, у нас есть
+          возможность подписки, предоставляющей доступ к эксклюзивным
+          произведениям и новинкам. Станьте постоянным читателем и наслаждайтесь
+          литературными открытиями каждый день.
         </p>
-    </footer>
-    <script src="../scripts/script.js"></script>
-</body>
+      </div>
 
+      <div id="social_networks_block">
+        <h2 class="block-header">Социальные сети</h2>
+
+        <div id="soc_network_holder">
+          <a id="vk" href="https://vk.com/" aria-label="ВКонтакте">
+            <i class="icon fa-brands fa-vk"></i>
+          </a>
+          <a id="telegram" href="https://telegram.com/" aria-label="Telegram">
+            <i class="icon fa-brands fa-telegram"></i>
+          </a>
+        </div>
+      </div>
+
+      <address>
+        <h2 class="block-header">Контакты</h2>
+        <a href="mailto:leelibrary@lee.ru">
+          <i class="fa-solid fa-envelope"></i>leelibrary@lee.ru</a
+        >
+        <br />
+        <a href="tel:+79161234567">
+          <i class="fa-solid fa-phone"></i>+7 (916) 123-45-67</a
+        >
+      </address>
+
+      <p id="copyright" class="footer-author-text">
+        Сделал Крыжановский Дмитрий Владимирович (группа ИКБО-01-22) в 2023
+        году.
+      </p>
+    </footer>
+
+    <script>
+      const list = document.querySelectorAll(".list");
+      function activeLink() {
+        list.forEach((item) => item.classList.remove("active"));
+        this.classList.add("active");
+      }
+      list.forEach((item) => item.addEventListener("click", activeLink));
+    </script>
+    <script src="../scripts/script.js"></script>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
 </html>
