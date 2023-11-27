@@ -1,0 +1,134 @@
+[
+  {
+    "id": 0,
+    "cover": "../source/book_pics/clean_code.png",
+    "title": "Чистый код",
+    "author": "Роберт Мартин",
+    "rating": {
+      "value": 4.0,
+      "votes": 104
+    },
+    "price": 599
+  },
+  {
+    "id": 1,
+    "cover": "../source/book_pics/grokking_algorithms.png",
+    "title": "Грокаем алгоритмы",
+    "author": "Адитья Бхаргава",
+    "rating": {
+      "value": 4.6,
+      "votes": 211
+    },
+    "price": 599
+  },
+  {
+    "id": 2,
+    "cover": "../source/book_pics/operating_system.png",
+    "title": "Современные операционные системы. 4-е издание",
+    "author": "Эндрю Таненбаум, Херберт Бос",
+    "rating": {
+      "value": 3.9,
+      "votes": 42
+    },
+    "price": 699
+  },
+  {
+    "id": 3,
+    "cover": "../source/book_pics/go.png",
+    "title": "Go. Идиомы и паттерны проектирования",
+    "author": "Джон Боднер",
+    "rating": {
+      "value": 4.2,
+      "votes": 12
+    },
+    "price": 699
+  },
+  {
+    "id": 4,
+    "cover": "../source/book_pics/sql.png",
+    "title": "SQL. Быстрое погружение",
+    "author": "Уолтер Шилдс",
+    "rating": {
+      "value": 4.3,
+      "votes": 24
+    },
+    "price": 599
+  },
+  {
+    "id": 5,
+    "cover": "../source/book_pics/clean_arch.png",
+    "title": "Чистая архитектура. Искусство разработки программного обеспечения",
+    "author": "Роберт Мартин",
+    "rating": {
+      "value": 4.5,
+      "votes": 14
+    },
+    "price": 600
+  },
+  {
+    "id": 6,
+    "cover": "../source/book_pics/learn_python.png",
+    "title": "Изучаем Python: программирование игр, визуализация данных, веб-приложения",
+    "author": "Эрик Мэтиз",
+    "rating": {
+      "value": 4.2,
+      "votes": 23
+    },
+    "price": 699
+  },
+  {
+    "id": 7,
+    "cover": "../source/book_pics/ai_pract.png",
+    "title": "Нейросети практика",
+    "author": "Джейд Картер",
+    "rating": {
+      "value": 5.0,
+      "votes": 125
+    },
+    "price": 690
+  },
+  {
+    "id": 8,
+    "cover": "../source/book_pics/doom.png",
+    "title": "Повелители DOOM. Как два парня создали культовый шутер...",
+    "author": "Дэвид Кушнер",
+    "rating": {
+      "value": 4.7,
+      "votes": 230
+    },
+    "price": 690
+  },
+  {
+    "id": 9,
+    "cover": "../source/book_pics/linux.png",
+    "title": "Linux. Руководство программиста",
+    "author": "Джон Фуско",
+    "rating": {
+      "value": 4.4,
+      "votes": 10
+    },
+    "price": 250
+  },
+  {
+    "id": 10,
+    "cover": "../source/book_pics/astra.png",
+    "title": "Astra Linux. Руководство по национальной операционной системе...",
+    "author": "Елена Вовк",
+    "rating": {
+      "value": 3.8,
+      "votes": 8
+    },
+    "price": 449
+  },
+  {
+    "id": 11,
+    "cover": "../source/book_pics/apache.png",
+    "title": "Apache Kafka. Потоковая обработка и анализ данных",
+    "author": "Гвен Шапира, Тодд Палино",
+    "rating": {
+      "value": 4.2,
+      "votes": 28
+    },
+    "price": 649
+  }
+]

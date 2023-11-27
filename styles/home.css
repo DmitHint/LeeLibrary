@@ -1,0 +1,56 @@
+.banners-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.banners-container *{
+    border-radius: 20px;
+}
+
+.banners-container div{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.banners-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.banners-container div:hover{
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+    transition: box-shadow 0.3s ease-out;
+}
+
+.banners-container img:hover{
+    border-radius: 80px;
+    transition: border-radius 0.3s ease-out;
+    cursor: pointer;
+}
+
+
+.small-rectangle {
+  max-height: 200px;
+  text-align: center;
+  color: #fff;
+  grid-row: span 1;
+  grid-column: span 1;
+}
+
+.big-rectangle {
+  max-height: 410px;
+  background-color: #3498db;
+  grid-row: span 2;
+  grid-column: span 2;
+}
+
+.small-rectangle {
+  background-color: #2ecc71;
+}
+
+main h1 {
+    padding-left: 50px;
+    color: var(--primary-color);
+}

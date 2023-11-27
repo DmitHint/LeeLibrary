@@ -1,20 +1,12 @@
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-.icon:hover {
-  color: lightseagreen;
-  transition: 0.3s;
-  cursor: pointer;
+main {
+  height: 100%;
 }
 
 .rating-field {
   display: flex;
   align-items: center;
-  margin-top: -10px;
-  margin-bottom: -10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .star-ico {
@@ -32,7 +24,7 @@ body {
   margin-right: 3px;
 }
 
-.rates-count {
+.votes {
   font-size: 14px;
   margin-left: 5px;
   color: #aaa;
@@ -94,10 +86,11 @@ body {
 }
 
 .panel {
+  max-width: 80%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px;
+  margin: 25px auto;
 }
 
 .left-side,
@@ -115,7 +108,7 @@ body {
 #payment-button {
   max-width: 80%;
   margin: 15px auto;
-  background-color: #4CAF50;
+  background-color: #4caf50;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   font-size: 16px;
@@ -123,7 +116,6 @@ body {
   border: none;
   cursor: pointer;
   border-radius: 5px;
-
 }
 
 #summ-placeholder {

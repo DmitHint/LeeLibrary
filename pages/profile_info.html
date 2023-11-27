@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="../styles/style.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/photo_slider.css" />
-    <link rel="stylesheet" href="../styles/home.css" />
+    <link rel="stylesheet" href="../styles/profile_info.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -58,7 +57,7 @@
       <div class="pc-menu">
         <ul>
           <li class="nav-item">
-            <a href="index.html" class="active">
+            <a href="index.html">
               <ion-icon name="home-outline"></ion-icon>
               Главная
             </a>
@@ -76,7 +75,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="cart.html">
+            <a href="cart.html" class="active">
               <ion-icon name="bag-handle-outline"></ion-icon>
               Корзина
             </a>
@@ -92,8 +91,8 @@
 
       <div class="mobile-menu">
         <ul>
-          <li class="list active">
-            <a href="index.html" class="active">
+          <li class="list">
+            <a href="index.html">
               <span class="icon">
                 <ion-icon name="home-outline"></ion-icon>
               </span>
@@ -128,8 +127,8 @@
             </a>
           </li>
 
-          <li class="list">
-            <a href="profile_info.html">
+          <li class="list active">
+            <a href="profile_info.html" class="active">
               <span class="icon">
                 <ion-icon name="person-circle-outline"></ion-icon>
               </span>
@@ -141,69 +140,30 @@
     </header>
 
     <main>
-      <div class="banners-container">
-        <div class="big-rectangle">
-          <img src="../source/banners/books_versus.png" />
-        </div>
-        <div class="small-rectangle">
-          <img src="../source/banners/banner-1.jpg" />
-        </div>
-        <div class="small-rectangle">
-          <img src="../source/banners/banner-2.jpg" />
-        </div>
-      </div>
-
-      <h1>Рекомендации для вас</h1>
-      <div class="slider-section">
-        <div class="container" id="container-recommendations">
-          <div class="slider-wrapper">
-            <button
-              id="prev-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_left
-            </button>
-
-            <div class="books-list" id="recommendations"></div>
-            <button
-              id="next-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_right
-            </button>
-          </div>
-          <div class="slider-scrollbar">
-            <div class="scrollbar-track">
-              <div class="scrollbar-thumb"></div>
+      <div class="profile_container">
+        <div class="sidebar">
+          <div class="sections">
+            <div class="sections-item">Профиль</div>
+            <div class="sections-item">Личные данные</div>
+            <div class="sections-item">Заказы</div>
+            <div class="sections-item">Подписка</div>
+            <div class="logout-item">
+              <ion-icon name="exit-outline"></ion-icon>
+              Выйти
             </div>
           </div>
         </div>
-      </div>
-
-      <h1>Популярные новинки</h1>
-      <div class="slider-section">
-        <div class="container" id="container-new">
-          <div class="slider-wrapper">
-            <button
-              id="prev-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_left
-            </button>
-
-            <div class="books-list" id="new"></div>
-            <button
-              id="next-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_right
-            </button>
-          </div>
-          <div class="slider-scrollbar">
-            <div class="scrollbar-track">
-              <div class="scrollbar-thumb"></div>
-            </div>
-          </div>
+        <div class="profile-content">
+          <h2>ПРОФИЛЬ</h2>
+          <h3>ЛИЧНЫЕ ДАННЫЕ</h3>
+          <p>Крыжановский Дмитрий</p>
+          <p>+7 (912) 123-45-67 · dmitr.kryzh@gmail.com</p>
+          <h3>АКТИВНЫЕ ЗАКАЗЫ</h3>
+          <p>У вас пока нет активных заказов</p>
+          <h3>АБОНЕМЕНТ</h3>
+          <p>3 книги в месяц</p>
+          <h3>КНИГ ПРОЧИТАНО: 2</h3>
+          <h3>ОТЗЫВОВ ОСТАВЛЕНО: 3</h3>
         </div>
       </div>
     </main>
@@ -263,7 +223,7 @@
     </script>
 
     <script src="../scripts/script.js"></script>
-    <script src="../scripts/home_script.js"></script>
+    <script src="../scripts/photo_slider_script.js"></script>
 
     <script
       type="module"

@@ -1,29 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="ru">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/x-icon" href="../source/logo.png" />
-    <meta name="viewport" content="width=device-width" />
-    <title>LeeLibrary</title>
-
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/header.css" />
-    <link rel="stylesheet" href="../styles/photo_slider.css" />
-    <link rel="stylesheet" href="../styles/home.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Магазин</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
     <link
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
       rel="stylesheet"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
 
     <link
@@ -33,11 +19,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
   </head>
-
   <body>
     <header>
-      <a class="icon">
+      <a href="index.html" class="icon">
         <img
           src="../source/logo.png"
           alt="Логотип"
@@ -58,7 +46,7 @@
       <div class="pc-menu">
         <ul>
           <li class="nav-item">
-            <a href="index.html" class="active">
+            <a href="index.html">
               <ion-icon name="home-outline"></ion-icon>
               Главная
             </a>
@@ -76,7 +64,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="cart.html">
+            <a href="cart.html" class="active">
               <ion-icon name="bag-handle-outline"></ion-icon>
               Корзина
             </a>
@@ -92,8 +80,8 @@
 
       <div class="mobile-menu">
         <ul>
-          <li class="list active">
-            <a href="index.html" class="active">
+          <li class="list">
+            <a href="index.html">
               <span class="icon">
                 <ion-icon name="home-outline"></ion-icon>
               </span>
@@ -119,7 +107,7 @@
             </a>
           </li>
 
-          <li class="list">
+          <li class="list active">
             <a href="cart.html">
               <span class="icon">
                 <ion-icon name="bag-handle-outline"></ion-icon>
@@ -141,73 +129,25 @@
     </header>
 
     <main>
-      <div class="banners-container">
-        <div class="big-rectangle">
-          <img src="../source/banners/books_versus.png" />
-        </div>
-        <div class="small-rectangle">
-          <img src="../source/banners/banner-1.jpg" />
-        </div>
-        <div class="small-rectangle">
-          <img src="../source/banners/banner-2.jpg" />
-        </div>
-      </div>
-
-      <h1>Рекомендации для вас</h1>
-      <div class="slider-section">
-        <div class="container" id="container-recommendations">
-          <div class="slider-wrapper">
-            <button
-              id="prev-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_left
-            </button>
-
-            <div class="books-list" id="recommendations"></div>
-            <button
-              id="next-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_right
-            </button>
-          </div>
-          <div class="slider-scrollbar">
-            <div class="scrollbar-track">
-              <div class="scrollbar-thumb"></div>
-            </div>
-          </div>
+      <div class="panel">
+        <div class="left-side"><h1>Корзина</h1></div>
+        <div class="right-side">
+          <span class="icon" onclick="filterByRating()">
+            <ion-icon name="filter-outline"></ion-icon>
+          </span>
+          <span class="icon" onclick="sortByPrice()">
+            <ion-icon name="swap-vertical-outline"></ion-icon>
+          </span>
+          <span class="icon" onclick="clearCart()">
+            <ion-icon name="trash-outline"></ion-icon>
+          </span>
         </div>
       </div>
-
-      <h1>Популярные новинки</h1>
-      <div class="slider-section">
-        <div class="container" id="container-new">
-          <div class="slider-wrapper">
-            <button
-              id="prev-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_left
-            </button>
-
-            <div class="books-list" id="new"></div>
-            <button
-              id="next-slide"
-              class="slide-button material-symbols-outlined"
-            >
-              chevron_right
-            </button>
-          </div>
-          <div class="slider-scrollbar">
-            <div class="scrollbar-track">
-              <div class="scrollbar-thumb"></div>
-            </div>
-          </div>
-        </div>
+      <div id="cart-container"></div>
+      <div id="payment-button">
+        К оплате: <span id="summ-placeholder">0</span>
       </div>
     </main>
-
     <footer id="contacts">
       <div id="about_block">
         <h2 class="block-header">О сайте</h2>
@@ -253,18 +193,8 @@
       </p>
     </footer>
 
-    <script>
-      const list = document.querySelectorAll(".list");
-      function activeLink() {
-        list.forEach((item) => item.classList.remove("active"));
-        this.classList.add("active");
-      }
-      list.forEach((item) => item.addEventListener("click", activeLink));
-    </script>
-
+    <script src="../scripts/cart_script.js"></script>
     <script src="../scripts/script.js"></script>
-    <script src="../scripts/home_script.js"></script>
-
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

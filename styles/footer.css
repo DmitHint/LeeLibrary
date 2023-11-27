@@ -1,285 +1,240 @@
-:root{
-
-}
+main {
+  min-height: 100vh;
+} 
 
 footer {
-    grid-area: footer;
-    background: darkslategrey;
+  grid-area: footer;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+  background: darkslategrey;
+  box-sizing: border-box;
+  z-index: 100;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: center;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  gap: 10px;
 
-    -webkit-box-sizing: border-box;
+  flex-shrink: 0;
 
-    box-sizing: border-box;
-    z-index: 100;
+  color: white;
 
-    padding: 0 1rem;
+  grid-template-areas:
+    "about contacts"
+    "about socNetworks"
+    "copyright copyright";
 
-    display: grid;
-    justify-items: start;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 10px;
-
-    color: white;
-
-    grid-template-areas:
-        "about socNetworks contacts"
-        "copyright copyright copyright";
-
-    margin-top: 3rem;
+  margin-top: 3rem;
 }
 
-/* Make headers white */
 footer .block-header {
-    color: white;
-    font-style: normal;
+  width: 100%;
 }
 
-/* Underline under the header of the block */
 footer h2:after {
-    content: "";
-    display: block;
-    width: 20%;
-    height: 5px;
-    background: white;
-    margin-top: 10px;
+  content: "";
+  display: block;
+  width: 60%;
+  height: 5px;
+  background: white;
+  margin-top: 0.3em;
 }
 
-/* Social networks block */
 footer #soc_network_holder {
-    margin: 20px 0;
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 20px;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+  margin: 0.7em 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 footer #social_networks_block {
-    grid-area: socNetworks;
+  display: block;
+  grid-area: socNetworks;
 }
 
 footer #soc_network_holder a {
-    padding: 5px 5px;
-    color: var(--light-blue);
-    text-decoration: none;
-    position: relative;
-    z-index: 1;
-    width: calc(2em + 5px);
-    height: calc(2em + 5px);
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-
-    -webkit-box-shadow: 0 0 5px 3px rgba(0, 0, 0, .6);
-
-    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .6);
-
-    background: #0f0f15;
-
-    border-radius: 100%;
-
-    overflow: hidden;
-
-    -webkit-transition: all 0.4s;
-
-    -o-transition: all 0.4s;
-
-    transition: all 0.4s;
+  padding: 5px 5px;
+  color: var(--light-blue);
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  width: calc(2em + 5px);
+  height: calc(2em + 5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6);
+  background: #0f0f15;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: all 0.4s;
 }
 
 footer #soc_network_holder a i {
-    font-size: 1.5em;
+  font-size: 1.5em;
 }
 
 footer #soc_network_holder a:before {
-    position: absolute;
-    content: " ";
-    left: -2px;
-    bottom: -2px;
-    right: -2px;
-    top: -2px;
-    background: darkslategray;
-    z-index: -1;
-
-    -webkit-transition: all 0.4s;
-
-    -o-transition: all 0.4s;
-
-    transition: all 0.4s;
+  position: absolute;
+  content: " ";
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  top: -2px;
+  background: darkslategray;
+  z-index: -1;
+  transition: all 0.4s;
 }
 
 footer #soc_network_holder #vk:hover {
-    color: #0077FF;
-}
-
-footer #soc_network_holder #linkedin:hover {
-    color: #0077B5;
+  color: #0077ff;
 }
 
 footer #soc_network_holder #twitter:hover {
-    color: #1DA1F2;
+  color: #1da1f2;
 }
 
 #soc_network_holder #telegram:hover {
-    color: #0088cc;
-}
-
-footer #soc_network_holder #github:hover {
-    color: #fafafa;
+  color: #0088cc;
 }
 
 footer #soc_network_holder a:hover:before {
-    top: calc(100% + 2px);
+  top: calc(100% + 2px);
 }
 
 footer #soc_network_holder a:after {
-    position: absolute;
-    content: " ";
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -2;
-
-    margin: 2px;
-    border-radius: 100%;
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  margin: 2px;
+  border-radius: 100%;
 }
 
 footer #soc_network_holder #vk:after {
-    background: rgb(232, 223, 19);
-    background: -o-linear-gradient(315deg, rgb(232, 223, 19) 0%, rgb(255, 112, 151) 100%);
-    background: linear-gradient(135deg, rgb(232, 223, 19) 0%, rgb(255, 112, 151) 100%);
+  background: rgb(232, 223, 19);
+  background: -o-linear-gradient(
+    315deg,
+    rgb(232, 223, 19) 0%,
+    rgb(255, 112, 151) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgb(232, 223, 19) 0%,
+    rgb(255, 112, 151) 100%
+  );
 }
 
 footer #soc_network_holder #telegram:after {
-    background: rgb(192, 135, 94);
-    background: -o-linear-gradient(315deg, rgb(229, 133, 65) 0%, rgb(255, 0, 115) 100%);
-    background: linear-gradient(135deg, rgb(229, 133, 65) 0%, rgb(255, 0, 115) 100%);
+  background: rgb(192, 135, 94);
+  background: -o-linear-gradient(
+    315deg,
+    rgb(229, 133, 65) 0%,
+    rgb(255, 0, 115) 100%
+  );
+  background: linear-gradient(
+    135deg,
+    rgb(229, 133, 65) 0%,
+    rgb(255, 0, 115) 100%
+  );
 }
 
 footer #about_block {
-    grid-area: about;
-}
-
-footer #about_block {
-    color: white;
+  grid-area: about;
+  color: white;
 }
 
 footer address {
-    grid-area: contacts;
-
-    display: -webkit-box;
-
-    display: -ms-flexbox;
-
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: flex-start;
+  grid-area: contacts;
+  display: block;
+}
+footer address a {
+  margin-top: 10px;
 }
 
 footer address h2 {
-    width: 100%;
+  width: 100%;
 }
 
 footer address a {
-    -webkit-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
-    transition: all 0.3s ease;
-    color: lightblue;
-    text-decoration: none;
-    font-size: 1.2rem;
-    margin: 0 10px;
-    text-align: left;
-    position: relative;
+  transition: all 0.3s ease;
+  color: lightblue;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 10px;
+  text-align: left;
+  position: relative;
 }
 
 footer address a i {
-    margin-right: 10px;
+  margin-right: 1rem;
 }
 
 footer address a:hover {
-    color: lightgreen;
+  color: lightgreen;
 }
 
 footer address a:active {
-    color: lightpink;
+  color: lightpink;
 }
 
 footer address a:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 0;
-    left: 0;
-    bottom: -4px;
-    height: 4px;
-    background: lightblue;
-    -webkit-transition: width .3s;
-    -o-transition: width .3s;
-    transition: width .3s;
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  height: 4px;
+  background: lightblue;
+  transition: width 0.3s;
+}
+
+footer p {
+  margin-top: 0.5em;
 }
 
 footer address a:hover:after {
-    width: 100%;
-    background: lightgreen;
+  width: 100%;
+  background: lightgreen;
 }
-
 
 #copyright {
-    justify-self: center;
-    grid-area: copyright;
-    font-style: italic;
-    text-align: center;
-    opacity: 70%;
-    color: #b0b0b0;
+  justify-self: center;
+  grid-area: copyright;
+  font-style: italic;
+  text-align: center;
+  opacity: 70%;
+  color: #b0b0b0;
 
-    margin: 20px 0 5px;
-}
-
-@media screen and (max-width: 1250px) {
-    footer {
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "about socNetworks contacts"
-            "copyright copyright";
-    }
+  margin: 20px 0 5px;
 }
 
 @media screen and (max-width: 800px) {
-    footer {
-        grid-template-columns: none;
-        grid-auto-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "about"
-            "socNetworks"
-            "contacts"
-            "copyright";
-        width: 100%;
-    }
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "about about"
+      "contacts socNetworks"
+      "copyright copyright";
+    width: 100%;
+    margin-bottom: 3em;
+  }
 
-    #social_networks_block {
-        width: 100%;
-        font-size: 1.4rem;
-    }
+  footer address a {
+    font-size: 1em;
+  }
+
+  footer i {
+    font-size: 0.8em;
+  }
 }

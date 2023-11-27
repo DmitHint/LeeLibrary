@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,12 +12,21 @@
       rel="stylesheet"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="../styles/style.css" />
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/cart.css" />
   </head>
   <body>
-    <header class="top-nav">
-      <div class="icon">
+    <header>
+      <a href="index.html" class="icon">
         <img
           src="../source/logo.png"
           alt="Логотип"
@@ -25,23 +34,102 @@
           height="48px"
         />
         <h1>LeeLibrary</h1>
+      </a>
+
+      <div class="search-box">
+        <form action="">
+          <input type="text" name="search" id="search" placeholder="Поиск" />
+          <button type="submit" title="search">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <div class="pc-menu">
+        <ul>
+          <li class="nav-item">
+            <a href="index.html">
+              <ion-icon name="home-outline"></ion-icon>
+              Главная
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="catalog.html">
+              <ion-icon name="book-outline"></ion-icon>
+              Каталог
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="favorite.html">
+              <ion-icon name="heart-outline"></ion-icon>
+              Понравившееся
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="cart.html" class="active">
+              <ion-icon name="bag-handle-outline"></ion-icon>
+              Корзина
+            </a>
+          </li>
+          <li class="nav-item" href="profile_info.html">
+            <a href="profile_info.html">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              Профиль
+            </a>
+          </li>
+        </ul>
       </div>
 
-      <input id="menu-toggle" type="checkbox" />
-      <label class="menu-button-container" for="menu-toggle">
-        <div class="menu-button"></div>
-      </label>
+      <div class="mobile-menu">
+        <ul>
+          <li class="list">
+            <a href="index.html">
+              <span class="icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </span>
+              <span class="text">Главная</span>
+            </a>
+          </li>
 
-      <ul class="menu">
-        <li><a href="auth.html">Вход</a></li>
-        <li><a href="subscribe.html">Подписка</a></li>
-        <li><a href="catalog.html">Каталог</a></li>
-        <li><a href="cart.html">Корзина</a></li>
-        <li><a href="index.html#contacts">Контакты</a></li>
-      </ul>
+          <li class="list">
+            <a href="catalog.html">
+              <span class="icon">
+                <ion-icon name="book-outline"></ion-icon>
+              </span>
+              <span class="text">Каталог</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="favorite.html">
+              <span class="icon">
+                <ion-icon name="heart-outline"></ion-icon>
+              </span>
+              <span class="text">Понравившееся</span>
+            </a>
+          </li>
+
+          <li class="list active">
+            <a href="cart.html">
+              <span class="icon">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+              </span>
+              <span class="text">Корзина</span>
+            </a>
+          </li>
+
+          <li class="list">
+            <a href="profile_info.html">
+              <span class="icon">
+                <ion-icon name="person-circle-outline"></ion-icon>
+              </span>
+              <span class="text">Профиль</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
 
-    <main>
+    <main >
       <div class="panel">
         <div class="left-side"><h1>Корзина</h1></div>
         <div class="right-side">
@@ -59,11 +147,55 @@
       <div id="cart-container"></div>
       <div id="payment-button">
         К оплате: <span id="summ-placeholder">0</span>
-      </button>
-
-      <script src="../scripts/cart_script.js"></script>
+      </div>
     </main>
+    <footer id="contacts">
+      <div id="about_block">
+        <h2 class="block-header">О сайте</h2>
+        <p>
+          "LeeLibrary" – ваш онлайн-портал к миру литературы. У нас вы найдете
+          богатый выбор произведений для бесплатного чтения – от великих
+          классиков до современных шедевров.<br /><br />
 
+          Подписывайтесь на знания: помимо бесплатного контента, у нас есть
+          возможность подписки, предоставляющей доступ к эксклюзивным
+          произведениям и новинкам. Станьте постоянным читателем и наслаждайтесь
+          литературными открытиями каждый день.
+        </p>
+      </div>
+
+      <div id="social_networks_block">
+        <h2 class="block-header">Социальные сети</h2>
+
+        <div id="soc_network_holder">
+          <a id="vk" href="https://vk.com/" aria-label="ВКонтакте">
+            <i class="icon fa-brands fa-vk"></i>
+          </a>
+          <a id="telegram" href="https://telegram.com/" aria-label="Telegram">
+            <i class="icon fa-brands fa-telegram"></i>
+          </a>
+        </div>
+      </div>
+
+      <address>
+        <h2 class="block-header">Контакты</h2>
+        <a href="mailto:leelibrary@lee.ru">
+          <i class="fa-solid fa-envelope"></i>leelibrary@lee.ru</a
+        >
+        <br />
+        <a href="tel:+79161234567">
+          <i class="fa-solid fa-phone"></i>+7 (916) 123-45-67</a
+        >
+      </address>
+
+      <p id="copyright" class="footer-author-text">
+        Сделал Крыжановский Дмитрий Владимирович (группа ИКБО-01-22) в 2023
+        году.
+      </p>
+    </footer>
+
+    <script src="../scripts/cart_script.js"></script>
+    <script src="../scripts/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

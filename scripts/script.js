@@ -1,28 +1,23 @@
-function truncate(elementId, maxLength) {
-    var element = document.getElementById(elementId);
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".mobile-menu li");
 
-    var pElement = element?.querySelector('p');
+    navLinks.forEach(function (link) {
+        link.addEventListener("click", function () {
+            navLinks.forEach(function (navLink) {
+                navLink.classList.remove("active");
+            });
+            this.classList.add("active");
+            localStorage.setItem("activeNavLink", this.href);
+        });
+    });
 
-    if (pElement) {
-        var text = pElement.textContent;
+    const activeNavLink = localStorage.getItem("activeNavLink");
 
-        if (text.length > maxLength) {
-            pElement.textContent = text.substring(0, maxLength) + '…';
-        }
+    if (activeNavLink) {
+        navLinks.forEach(function (link) {
+            if (link.href === activeNavLink) {
+                link.classList.add("active");
+            }
+        });
     }
-
-}
-
-var genres = [
-    "drama",
-    "dev",
-    "poetry",
-    "detective",
-    "finance",
-    "love",
-    "child",
-];
-
-for (var str of genres) {
-    truncate(str, 170);
-}
+});

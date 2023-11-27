@@ -1,7 +1,3 @@
-#likeContainer {
-    text-align: center;
-    margin-top: 50px;
-}
 #likeButton {
     display: flex;
     align-items: center;
@@ -25,10 +21,6 @@
     font-size: 18px;
     color: gray;
     padding-right: 5px;
-}
-
-#likeButton.liked {
-    background-color: #fac3bd;
 }
 
 #likeButton.liked #heartIcon{
