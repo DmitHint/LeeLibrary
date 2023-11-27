@@ -231,3 +231,8 @@
     object-fit: cover;
   }
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}

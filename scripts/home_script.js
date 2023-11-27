@@ -74,6 +74,7 @@ function bookCardGenerate(sectionId, book, isInLiked, isInCart) {
     bookCard.dataset.bookId = book.id;
 
     bookCard.innerHTML = `
+                        <a href="../pages/book_details.html?id=${book.id}">
                             <img class="book-cover" src="${book.cover}" alt="${book.title}"></img>
                             <div class="caption">
                                 <p class="book-title">${book.title}</p>
@@ -92,7 +93,7 @@ function bookCardGenerate(sectionId, book, isInLiked, isInCart) {
                                     <span id="votes">(${book.rating.votes})</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                         `;
 
     return bookCard;

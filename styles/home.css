@@ -6,12 +6,12 @@
   padding: 20px;
 }
 
-.banners-container *{
-    border-radius: 20px;
+.banners-container * {
+  border-radius: 20px;
 }
 
-.banners-container div{
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+.banners-container div {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .banners-container img {
@@ -19,17 +19,16 @@
   height: 100%;
   object-fit: cover;
 }
-.banners-container div:hover{
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
-    transition: box-shadow 0.3s ease-out;
+.banners-container div:hover {
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.3s ease-out;
 }
 
-.banners-container img:hover{
-    border-radius: 80px;
-    transition: border-radius 0.3s ease-out;
-    cursor: pointer;
+.banners-container img:hover {
+  border-radius: 80px;
+  transition: border-radius 0.3s ease-out;
+  cursor: pointer;
 }
-
 
 .small-rectangle {
   max-height: 200px;
@@ -46,11 +45,12 @@
   grid-column: span 2;
 }
 
+
 .small-rectangle {
   background-color: #2ecc71;
 }
 
 main h1 {
-    padding-left: 50px;
-    color: var(--primary-color);
+  padding-left: 50px;
+  color: var(--primary-color);
 }

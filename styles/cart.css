@@ -93,6 +93,7 @@ main {
   margin: 25px auto;
 }
 
+
 .left-side,
 .right-side {
   display: flex;
@@ -111,7 +112,8 @@ main {
   background-color: #4caf50;
   padding: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  font-size: 16px;
+  font-size: 30px;
+  font-family: "Oswald", sans-serif;
   color: #fff;
   border: none;
   cursor: pointer;
