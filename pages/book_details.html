@@ -132,30 +132,74 @@
     <main>
       <div class="container">
         <div class="product">
-          <img src="../source/book_pics/apache.png" alt="Обложка книги" />
-
+          <!-- <img src="../source/book_pics/apache.png" alt="Обложка книги" />
           <div class="product-info">
             <h1>Название вашей книги</h1>
-
-            <div class="buttons">
-              <button>Купить</button>
-              <button>Скачать</button>
-              <button>Заказать бумажный вариант</button>
-              <button>Взять по подписке</button>
+            <h2>Автор книги</h2>
+            <div class="panel">
+              <button class="button like-button">
+                <ion-icon name="heart"></ion-icon>
+              </button>
+              <button class="button cart-button">
+                <ion-icon name="bag-handle-outline"></ion-icon>
+              </button>
+              <div class="rating-field">
+                <ion-icon name="star"></ion-icon>
+                <span id="rating">33</span>
+                <span id="votes">(22)</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="rating">
-          <p>Рейтинг: 4.5/5</p>
+          <div class="buttons">
+            <button id="buy">Купить</button>
+            <button id="download">Скачать</button>
+            <button id="order">Заказать бумажный вариант</button>
+            <button id="with-sub">Взять по подписке</button>
+          </div> -->
         </div>
 
         <div class="reviews">
           <h2>Отзывы</h2>
-          <!-- Здесь может быть ваш блок с отзывами -->
-          <p>Отзыв 1</p>
-          <p>Отзыв 2</p>
-          <!-- и так далее -->
+          <div class="reviews-container">
+            <div class="review">
+              <div class="avatar"></div>
+              <div class="user-info">
+                <div class="user-name">Имя Пользователя 1</div>
+                <div class="stars">★★★★★</div>
+                <div class="review-text">
+                  Текст отзыва 1 будет здесь. Может быть довольно длинным.
+                </div>
+              </div>
+            </div>
+
+            <div class="review">
+              <div class="avatar"></div>
+              <div class="user-info">
+                <div class="user-name">Имя Пользователя 2</div>
+                <div class="stars">★★★☆☆</div>
+                <div class="review-text">
+                  Текст отзыва 2 будет здесь. Тоже может быть длинным.
+                </div>
+              </div>
+            </div>
+
+            <div class="review">
+              <div class="avatar"></div>
+              <div class="user-info">
+                <div class="user-name">Имя Пользователя 2</div>
+                <div class="stars">★★★☆☆</div>
+                <div class="review-text">
+                  Текст отзыва 2 будет здесь. Тоже может быть длинным.
+                </div>
+              </div>
+            </div>
+
+            <div class="add-review">
+              <textarea placeholder="Ваш отзыв"></textarea>
+              <button>Добавить отзыв</button>
+            </div>
+          </div>
         </div>
 
         <div class="description">

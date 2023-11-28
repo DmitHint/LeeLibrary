@@ -1,4 +1,5 @@
 function addToCart(sectionId, bookId) {
+    event.preventDefault();
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     if (!cart.find(item => item.id === bookId)) {
@@ -17,6 +18,7 @@ function addToCart(sectionId, bookId) {
 }
 
 function likeClicked(sectionId, bookId) {
+    event.preventDefault();
     let liked = JSON.parse(localStorage.getItem('liked')) || [];
 
     const container = document.querySelector("#" + sectionId);

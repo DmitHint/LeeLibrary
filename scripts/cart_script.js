@@ -74,7 +74,7 @@ function renderCart() {
 function fillTemp() {
     tempCart = []
     cart.forEach((item, index) => {
-        console.log("RATING = "+item.rating);
+        console.log("RATING = " + item.rating);
         if (item.rating.value >= 4.2) {
             tempCart.push(item);
         }
