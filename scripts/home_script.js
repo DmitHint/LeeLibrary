@@ -72,7 +72,6 @@ function addToLiked(sectionId, bookId) {
 function bookCardGenerate(sectionId, book, isInLiked, isInCart) {
     let bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
-    console.log(book);
     bookCard.dataset.bookId = book.id;
 
     bookCard.innerHTML = `
@@ -107,8 +106,6 @@ async function loadData() {
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const liked = JSON.parse(localStorage.getItem('liked')) || [];
-    console.log(cart);
-    console.log(liked);
 
     fetch('../data/home.json')
         .then(response => response.json())

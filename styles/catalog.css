@@ -27,6 +27,11 @@
   font-weight: bold;
 }
 
+.books a {
+  text-decoration: none;
+  color: black;
+}
+
 .genres a:after {
   display: block;
   position: relative;
@@ -43,7 +48,7 @@
 }
 
 .genres a:hover:after,
-.genres a:focus:after {
+.genres .active:after {
   width: 80%;
 }
 
@@ -53,16 +58,6 @@
   flex-wrap: wrap;
   justify-content: space-around;
   padding: 20px;
-}
-
-.book:hover {
-  transform: scale(1.03);
-  border: 3px solid black;
-}
-
-.book img {
-  max-width: 100%;
-  height: auto;
 }
 
 .books button * {
@@ -81,8 +76,7 @@
 
 .book-card:hover {
   border: 2px solid #000;
-  transform: scale(1.03);
-  transition: border 0.3s ease, transform 0.3s ease;
+  transition: border 0.3s ease;
 }
 
 .book-card p {
@@ -101,9 +95,15 @@
 }
 
 .book-cover {
-  max-width: 100%;
   height: auto;
+  max-width: 200px;
+  max-height: 250px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.book-cover img {
+  max-width: 150px;
+  object-fit: cover;
 }
 
 .rating-field {
@@ -154,9 +154,25 @@
 }
 
 .like-button {
-  color: red;
+  color: var(--star-color);
 }
 
 .book-title {
   font-weight: bold;
+}
+
+.in-list {
+  background-color: var(--light-hover);
+}
+
+.out-list {
+  background-color: var(--background);
+}
+
+@media (max-width: 950px) {
+  .book-card img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+  }
 }
