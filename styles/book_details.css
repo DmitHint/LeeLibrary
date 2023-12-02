@@ -11,12 +11,10 @@ body {
   overflow: hidden;
 }
 
-
 .product {
   border: 1px solid #ccc;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
   margin: 20px;
   padding: 20px;
   background-color: #fff;
@@ -30,24 +28,29 @@ body {
 }
 
 .product-info {
-  padding: 20px;
-  max-width: 40%;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
+  width: 400px;
 }
 
 .buttons button {
-  padding: 10px;
+  padding: 5px;
   font-size: 1.3em;
   font-family: "Oswald", sans-serif;
   color: #fff;
 }
 
 .panel * {
+  font-family: "Oswald", sans-serif;
+}
+
+.add-review * {
   font-family: "Oswald", sans-serif;
 }
 
@@ -59,13 +62,16 @@ body {
 .panel {
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 main h1 {
-    margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
+.product-info h2 {
+  color: var(--not-active);
+}
 
 .rating-field ion-icon {
   color: var(--star-color);
@@ -127,6 +133,20 @@ main button {
     max-width: 80%;
     height: auto;
   }
+
+  .product-info {
+    padding: 0px;
+    padding-top: 20px;
+    max-width: 90%;
+  }
+
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    padding: 15px;
+  }
 }
 
 .reviews-container {
@@ -140,7 +160,6 @@ main button {
 
 .review {
   display: flex;
-  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -200,12 +219,12 @@ main button {
 }
 
 #votes {
-    color: var(--not-active);
+  color: var(--not-active);
 }
 
 #rating {
-    color: var(--star-color);
-    font-weight: bold;
+  color: var(--star-color);
+  font-weight: bold;
 }
 
 .add-review button {

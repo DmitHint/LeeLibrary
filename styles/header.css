@@ -190,6 +190,23 @@ li a {
   display: none;
 }
 
+.mobile-menu .cart {
+  position: relative;
+  display: block;
+}
+
+.mobile-menu .badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 18px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 10px;
+}
+
 @media (max-width: 950px) {
   .pc-menu {
     display: none;
@@ -212,4 +229,21 @@ li a {
   header {
     position: static;
   }
+}
+
+.cart {
+  position: relative;
+  display: block;
+}
+
+.badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 20px;
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
 }

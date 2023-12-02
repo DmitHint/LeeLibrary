@@ -142,5 +142,125 @@
       "votes": 28
     },
     "price": 649
+  },
+  {
+    "id": 12,
+    "genre": "science_fiction",
+    "cover": "../source/book_pics/marionette.png",
+    "title": "Марионетка",
+    "author": "Полина Дашкова",
+    "rating": {
+      "value": 4.6,
+      "votes": 128
+    },
+    "price": 339
+  },
+  {
+    "id": 13,
+    "genre": "science_fiction",
+    "cover": "../source/book_pics/fila_vitae.png",
+    "title": "Fila vitae. Нити жизни",
+    "author": "Наталья Тимошенко",
+    "rating": {
+      "value": 4.7,
+      "votes": 108
+    },
+    "price": 200
+  },
+  {
+    "id": 14,
+    "genre": "science_fiction",
+    "cover": "../source/book_pics/who.png",
+    "title": "Кто не спрятался. История одной компании",
+    "author": "Наталья Тимошенко",
+    "rating": {
+      "value": 4.2,
+      "votes": 1208
+    },
+    "price": 400
+  },
+  {
+    "id": 15,
+    "genre": "science_fiction",
+    "cover": "../source/book_pics/alibi.png",
+    "title": "Алиби. Искусство обмана",
+    "author": "Павел Рубцов",
+    "rating": {
+      "value": 3.5,
+      "votes": 12
+    },
+    "price": 199
+  },
+  {
+    "id": 16,
+    "genre": "science_fiction",
+    "cover": "../source/book_pics/irreversible.png",
+    "title": "Невозвратимое",
+    "author": "Алиса Арчер",
+    "rating": {
+      "value": 4.4,
+      "votes": 212
+    },
+    "price": 239
+  },
+  {
+    "id": 17,
+    "genre": "science_fiction",
+    "cover": "../source/book_pics/twilight.png",
+    "title": "Полумрак",
+    "author": "Алексей Котаев",
+    "rating": {
+      "value": 4.8,
+      "votes": 8
+    },
+    "price": 199
+  },
+  {
+    "id": 18,
+    "genre": "detective",
+    "cover": "../source/book_pics/nights.png",
+    "title": "Ночи с Камелией",
+    "author": "Лариса Соболева",
+    "rating": {
+      "value": 4.6,
+      "votes": 38
+    },
+    "price": 169
+  },
+  {
+    "id": 19,
+    "genre": "detective",
+    "cover": "../source/book_pics/bad_child.png",
+    "title": "Плохой ребенок",
+    "author": "Генри Сирил",
+    "rating": {
+      "value": 3.3,
+      "votes": 11
+    },
+    "price": 209
+  },
+  {
+    "id": 20,
+    "genre": "detective",
+    "cover": "../source/book_pics/heirs.png",
+    "title": "Наследники",
+    "author": "Павел Астахов",
+    "rating": {
+      "value": 4.3,
+      "votes": 81
+    },
+    "price": 319
+  },
+  {
+    "id": 21,
+    "genre": "detective",
+    "cover": "../source/book_pics/victim.png",
+    "title": "Глазами жертвы",
+    "author": "Майк Омер",
+    "rating": {
+      "value": 4.8,
+      "votes": 758
+    },
+    "price": 459
   }
 ]

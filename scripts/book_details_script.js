@@ -33,14 +33,13 @@ function loadBook(book) {
                     <span id="votes">(${book.rating.votes})</span>
                 </div>
             </div>
+            <div class="buttons">
+                <button id="download">Скачать</button>
+                <button id="order">Заказать бумажный вариант</button>
+                <button id="with-sub">Взять по подписке</button>
+            </div>
         </div>
 
-        <div class="buttons">
-            <button id="buy">Купить</button>
-            <button id="download">Скачать</button>
-            <button id="order">Заказать бумажный вариант</button>
-            <button id="with-sub">Взять по подписке</button>
-        </div>
     `
 }
 
