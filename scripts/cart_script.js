@@ -85,6 +85,9 @@ function removeItem(id) {
 
 function clearCart() {
     cart = [];
+    tempCart = [];
+    isSorted = false
+    setSortColor();
     localStorage.removeItem('cart');
     renderCart();
 }
