@@ -1,4 +1,5 @@
 function addToCart(event) {
+    event.preventDefault();
     const bookId = event.target.dataset.bookId;
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -14,21 +15,17 @@ function addToCart(event) {
 
 
     let cartButton = bookCard.querySelector(".cart-button");
+    cartButton.classList.remove("out-list");
     cartButton.classList.add("in-list");
 
-
-    cart.forEach(book => {
-        console.log(book);
-    });
     localStorage.setItem('cart', JSON.stringify(cart));
 }
 
-function likeClicked(bookId, genre) {
+function likeClicked(bookId) {
     event.preventDefault();
     let liked = JSON.parse(localStorage.getItem('liked')) || [];
 
     let bookCard = document.querySelector(`[data-book-id="${bookId}"]`);
-    console.log(bookCard);
     let likeButton = bookCard.querySelector(".like-button");
     let likeIcon = likeButton.querySelector("ion-icon");
 
@@ -39,10 +36,8 @@ function likeClicked(bookId, genre) {
         };
         liked.push(newBook);
         likeIcon.setAttribute('name', 'heart');
-        console.log(likeButton);
         likeButton.classList.remove("out-list");
         likeButton.classList.add("in-list");
-        console.log(likeButton);
     } else {
         liked = liked.filter(item => item.id !== bookId);
         likeIcon.setAttribute('name', 'heart-outline');
@@ -50,15 +45,10 @@ function likeClicked(bookId, genre) {
         likeButton.classList.add("out-list");
     }
 
-    liked.forEach(book => {
-        console.log(book);
-    });
-
-
     localStorage.setItem('liked', JSON.stringify(liked));
 }
 
-function createCard(book, genre) {
+function createCard(book) {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
     const liked = JSON.parse(localStorage.getItem('liked')) || [];
 
@@ -97,7 +87,7 @@ function createCard(book, genre) {
     likeButton.classList.add('button', 'like-button');
     likeButton.title = 'like';
     likeButton.onclick = function () {
-        likeClicked(book.id, genre);
+        likeClicked(book.id);
     };
 
     const heartIcon = document.createElement('ion-icon');
@@ -108,6 +98,7 @@ function createCard(book, genre) {
         likeButton.classList.add('out-list');
         heartIcon.name = 'heart-outline';
     }
+    console.log(likeButton.classList);
     likeButton.appendChild(heartIcon);
 
     const cartButton = document.createElement('button');
@@ -121,7 +112,7 @@ function createCard(book, genre) {
     if (isInCart) {
         cartButton.classList.add('in-list');
     } else {
-        likeButton.classList.add('out-list');
+        cartButton.classList.add('out-list');
     }
     cartButton.appendChild(cartIcon);
 
@@ -165,14 +156,13 @@ async function renderCatalog(genre) {
 
             data.forEach(book => {
                 if (book.genre == genre) {
-                    booksContainer.appendChild(createCard(book, genre));
+                    booksContainer.appendChild(createCard(book));
                 }
             });
         })
         .catch(error => console.error('Error loading books:', error));
 
 }
-
 
 renderCatalog("it");
 

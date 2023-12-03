@@ -45,6 +45,9 @@ body {
   font-family: "Oswald", sans-serif;
   color: #fff;
 }
+.reviews button {
+  font-size: 1em;
+}
 
 .panel * {
   font-family: "Oswald", sans-serif;
@@ -163,6 +166,15 @@ main button {
   margin-bottom: 20px;
 }
 
+.reviews h2 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.description h2 {
+  margin-bottom: 15px;
+}
+
 .avatar {
   width: 50px;
   height: 50px;
@@ -196,6 +208,7 @@ main button {
 
 .add-review textarea {
   width: 100%;
+  font-size: 1.2em;
   padding: 10px;
   margin-bottom: 10px;
   resize: vertical;
@@ -246,4 +259,9 @@ main button {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.reviews,
+.description {
+  font-size: 1.3em;
 }

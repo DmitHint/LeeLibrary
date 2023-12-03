@@ -42,20 +42,15 @@ function addElementsHTML(arr) {
                             <p class="cart-item-author">${item.author}</p>
                             <p class="cart-item-price">${item.price} ₽</p>
                         </div>
-                        <div class="remove-item" onclick="removeItem(${item.index})">✕</div>
+                        <div class="remove-item" onclick="removeItem(${item.id})">✕</div>
                 `;
         cartContainer.appendChild(itemElement);
     });
 
 }
 
-
 function renderCart() {
     let arr = tempCart.length == 0 ? cart : tempCart;
-
-    console.log(cart);
-    console.log("ARR = " + arr);
-    console.log("FILTERED = " + isFiltered);
     const cartContainer = document.getElementById("cart-container");
     cartContainer.innerHTML = "";
     if (arr.length == 0) {
@@ -71,36 +66,17 @@ function renderCart() {
     addElementsHTML(arr);
 }
 
-function fillTemp() {
-    tempCart = []
-    cart.forEach((item, index) => {
-        console.log("RATING = " + item.rating);
-        if (item.rating.value >= 4.2) {
-            tempCart.push(item);
-        }
-    });
-}
+function removeItem(id) {
+    cart = cart.filter(book => book.id !== id);
+    tempCart = tempCart.filter(book => book.id !== id);
 
-function filterByRating() {
-    tempCart = [];
-    if (!isFiltered) {
-        fillTemp();
-        isFiltered = true;
-    } else {
-        isFiltered = false;
+    if (tempCart.length != 0 && isSorted) {
+        tempCart = tempCart.sort((a, b) => b.rating.value - a.rating.value);
     }
-    renderCart();
-}
-
-function removeItem(index) {
-    cart.splice(index, 1);
-
-    cart.forEach((item, i) => {
-        item.index = i;
-    });
-
-    if (tempCart.length != 0)
-        fillTemp();
+    else if (tempCart.length == 0) {
+        isSorted = false;
+        setSortColor();
+    }
 
     let new_local = cart.map(item => ({ "id": item.id }));
     localStorage.setItem('cart', JSON.stringify(new_local));
@@ -113,28 +89,40 @@ function clearCart() {
     renderCart();
 }
 
-function sortByPrice() {
-    cart.sort((a, b) => b.rating.localeCompare(a.rating));
-    cart.forEach((item, i) => {
-        item.id = i;
-    });
+function setSortColor() {
+    let sortBtn = document.querySelector(".sort");
+    if (isSorted) {
+        sortBtn.classList.add("active");
+        sortBtn.style.color = "#af3030";
+    } else {
+        tempCart = [];
+        sortBtn.classList.remove("active");
+        sortBtn.style.color = "#000";
+    }
+}
 
-    if (tempCart.length != 0)
-        fillTemp();
+function sortByRating() {
+    if (tempCart.length == 0 && cart.length == 0) {
+        setSortColor();
+        return;
+    }
+
+    tempCart = (tempCart.length == 0 ? cart : tempCart).slice();
+    tempCart = tempCart.sort((a, b) => b.rating.value - a.rating.value);
+    isSorted = !isSorted;
+
+    setSortColor();
 
     renderCart();
 }
 
 
 let tempCart = [];
-let isFiltered = false;
 let cart = [];
+let isSorted = false;
 initialize();
 
 async function initialize() {
     cart = await getCartWithDetails();
-    cart.forEach((item, index) => {
-        item.index = index;
-    });
     renderCart();
 }

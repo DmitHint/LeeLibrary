@@ -93,7 +93,6 @@ main {
   margin: 25px auto;
 }
 
-
 .left-side,
 .right-side {
   display: flex;
@@ -104,6 +103,19 @@ main {
   font-size: 35px;
   margin-left: 10px;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-side .icon:hover,
+.right-side .icon.active {
+  color: var(--star-color);
+}
+
+.icon p {
+  font-size: 0.4em;
 }
 
 #payment-button {

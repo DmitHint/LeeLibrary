@@ -2,13 +2,13 @@
   font-family: "Oswald", sans-serif;
 }
 
-h2 {
+main h2 {
   margin-top: 20px;
   margin-bottom: 20px;
   font-size: 2em;
 }
 
-h3 {
+main h3 {
   margin-top: 20px;
   margin-bottom: 8px;
   font-size: 1.4em;
@@ -63,15 +63,20 @@ main {
 }
 
 .logout-item {
-  padding: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
   color: red;
   font-size: 1.2em;
 }
 
-.logout-item:hover{
-    font-weight: bold;
-    transition: font-weight 0.8s ease;
+.logout-item ion-icon {
+  margin-right: 5px;
+}
+
+.logout-item:hover {
+  font-weight: bold;
 }
 
 .profile-content {
