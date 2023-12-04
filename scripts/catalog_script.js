@@ -98,7 +98,6 @@ function createCard(book) {
         likeButton.classList.add('out-list');
         heartIcon.name = 'heart-outline';
     }
-    console.log(likeButton.classList);
     likeButton.appendChild(heartIcon);
 
     const cartButton = document.createElement('button');

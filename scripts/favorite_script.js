@@ -147,7 +147,6 @@ async function renderFavorite() {
             .then(data => {
                 const booksContainer = document.querySelector('.books');
                 booksContainer.innerHTML = '';
-                console.log(liked);
 
                 liked.forEach(book => {
                     booksContainer.appendChild(createCard(data[book.id]));

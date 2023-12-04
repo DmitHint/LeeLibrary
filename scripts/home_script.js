@@ -43,8 +43,6 @@ function likeClicked(sectionId, bookId) {
         likeButton.classList.add("out-list");
     }
 
-    console.log(liked);
-
     localStorage.setItem('liked', JSON.stringify(liked));
 }
 
