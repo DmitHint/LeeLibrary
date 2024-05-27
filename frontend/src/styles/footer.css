@@ -1,0 +1,226 @@
+main {
+  min-height: 100vh;
+}
+
+footer {
+  grid-area: footer;
+  box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.1);
+  background: var(--primary-color);
+  box-sizing: border-box;
+  z-index: 100;
+  padding: 0 1rem;
+  justify-content: center;
+  display: grid;
+  justify-items: start;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: auto;
+  gap: 10px;
+  color: white;
+
+  grid-template-areas:
+    "about contacts"
+    "about socNetworks"
+    "copyright copyright";
+
+  margin-top: 3rem;
+}
+
+footer .block-header {
+  width: 100%;
+}
+
+footer h2:after {
+  content: "";
+  display: block;
+  width: 150px;
+  height: 5px;
+  background: white;
+  margin-top: 0.3em;
+}
+
+footer #soc_network_holder {
+  margin: 0.7em 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+footer #social_networks_block {
+  display: block;
+  grid-area: socNetworks;
+}
+
+footer #soc_network_holder a {
+  padding: 5px 5px;
+  color: var(--light-blue);
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  width: calc(2em + 5px);
+  height: calc(2em + 5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.6);
+  background: #0f0f15;
+  border-radius: 100%;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+footer #soc_network_holder a i {
+  font-size: 1.5em;
+}
+
+footer #soc_network_holder a:before {
+  position: absolute;
+  content: " ";
+  left: -2px;
+  bottom: -2px;
+  right: -2px;
+  top: -2px;
+  background: var(--primary-color);
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+footer #soc_network_holder #vk:hover {
+  color: #0077ff;
+}
+
+footer #soc_network_holder #twitter:hover {
+  color: #1da1f2;
+}
+
+#soc_network_holder #telegram:hover {
+  color: #0088cc;
+}
+
+footer #soc_network_holder a:hover:before {
+  top: calc(100% + 2px);
+}
+
+footer #soc_network_holder a:after {
+  position: absolute;
+  content: " ";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -2;
+  margin: 2px;
+  border-radius: 100%;
+}
+
+footer #soc_network_holder #vk:after {
+  background: rgb(232, 223, 19);
+  background: linear-gradient(
+    135deg,
+    rgb(232, 223, 19) 0%,
+    rgb(255, 112, 151) 100%
+  );
+}
+
+footer #soc_network_holder #telegram:after {
+  background: rgb(192, 135, 94);
+  background: linear-gradient(
+    135deg,
+    rgb(229, 133, 65) 0%,
+    rgb(255, 0, 115) 100%
+  );
+}
+
+footer #about_block {
+  grid-area: about;
+  color: white;
+}
+
+footer address {
+  grid-area: contacts;
+  display: block;
+}
+footer address a {
+  margin-top: 10px;
+}
+
+footer address h2 {
+  font-style: normal;
+  width: 100%;
+}
+
+footer address a {
+  transition: all 0.3s ease;
+  color: lightblue;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0 5px;
+  text-align: left;
+  position: relative;
+}
+
+footer address a i {
+  margin-right: 0.3rem;
+}
+
+footer address a:hover {
+  color: lightgreen;
+}
+
+footer address a:active {
+  color: lightpink;
+}
+
+footer address a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 0;
+  left: 0;
+  bottom: -4px;
+  height: 4px;
+  background: lightblue;
+  transition: width 0.3s;
+}
+
+footer p {
+  margin-top: 0.5em;
+}
+
+footer address a:hover:after {
+  width: 100%;
+  background: lightgreen;
+}
+
+#copyright {
+  justify-self: center;
+  grid-area: copyright;
+  font-style: italic;
+  text-align: center;
+  opacity: 70%;
+  color: #b0b0b0;
+
+  margin: 20px 0 5px;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+      "about about"
+      "contacts socNetworks"
+      "copyright copyright";
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  footer address a {
+    font-size: 1em;
+  }
+
+  footer i {
+    font-size: 0.8em;
+  }
+}

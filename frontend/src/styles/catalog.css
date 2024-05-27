@@ -1,0 +1,183 @@
+.catalog-container {
+  display: flex;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.genres {
+  position: sticky;
+  top: 80px;
+  height: 50vh;
+  flex: 1;
+  z-index: 1;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  padding: 20px;
+}
+
+.genres ul {
+  list-style: none;
+  padding: 0;
+}
+
+.genres li {
+  margin-bottom: 10px;
+}
+
+.genres a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.books a {
+  text-decoration: none;
+  color: black;
+}
+
+.genres a:after {
+  display: block;
+  position: relative;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--hover);
+  content: "";
+  transition: width 0.3s ease;
+}
+
+.genres a:hover {
+  color: var(--hover);
+}
+
+.genres a:hover:after,
+.genres .active:after {
+  width: 80%;
+}
+
+.books {
+  flex: 7;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.books button * {
+  font-size: 2em;
+}
+
+.book-card {
+  border: 2px solid #ccc;
+  margin: 3px;
+  padding: 5px;
+  text-align: center;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  border-radius: 10px;
+}
+
+.book-card:hover {
+  border: 2px solid #000;
+  transition: border 0.3s ease;
+}
+
+.book-card p {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: auto;
+}
+
+.book-card .caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-cover {
+  height: auto;
+  max-width: 200px;
+  max-height: 250px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.book-cover img {
+  max-width: 150px;
+  object-fit: cover;
+}
+
+.rating-field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#rating {
+  font-weight: bold;
+  color: var(--star-color);
+}
+
+#votes {
+  font-weight: normal;
+  color: var(--not-active);
+  margin-left: 0.3em;
+}
+
+.rating-field ion-icon {
+  color: var(--star-color);
+  padding-right: 0.2em;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card-bottom ion-icon {
+  pointer-events: none;
+}
+
+.button {
+  display: inline-block;
+  margin: 5px;
+  padding: 3px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.button:hover {
+  background-color: var(--light-hover);
+  transition: background-color 0.3s ease;
+}
+
+.like-button {
+  color: var(--star-color);
+}
+
+.book-title {
+  font-weight: bold;
+}
+
+.in-list {
+  background-color: var(--light-hover);
+}
+
+.out-list {
+  background-color: var(--background);
+}
+
+@media (max-width: 950px) {
+  .book-card img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: cover;
+  }
+  .genres {
+    top: 0;
+  }
+}
