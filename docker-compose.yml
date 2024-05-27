@@ -3,48 +3,50 @@ version: '3.8'
 services:
   frontend:
     build: ./frontend
-    ports:
-      - '3000:3000'
     depends_on:
       - backend
+    networks:
+      - internal
 
   backend:
     build: ./backend
-    ports:
-      - '8080:8080'
     depends_on:
       postgresql-db:
         condition: service_healthy
-
+    networks:
+      - internal
 
   postgresql-db:
     image: postgres:latest
-    command: postgres -c 'listen_addresses=*'
     healthcheck:
       test: ["CMD", "pg_isready", "-U", "postgres"]
       interval: 30s
       timeout: 10s
       retries: 5
     environment:
-      POSTGRES_DB: mygoal
+      POSTGRES_DB: leelibrary
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data
       - ./backend/00-init-db.sql:/docker-entrypoint-initdb.d/init.sql
-    ports:
-      - '5432:5432'
+    networks:
+      - internal
 
   pgadmin:
     image: dpage/pgadmin4:latest
     environment:
-      PGADMIN_DEFAULT_EMAIL: leelibrary@yandex.ru
-      PGADMIN_DEFAULT_PASSWORD: password
-    ports:
-      - '5050:80'
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
     depends_on:
       postgresql-db:
         condition: service_healthy
+    networks:
+      - internal
 
 volumes:
   postgres_data:
+
+networks:
+  internal:
+    driver: bridge
